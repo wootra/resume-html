@@ -6,7 +6,10 @@ export const createElement = (name, attrs = {}, children = []) => {
 	if (typeof children !== 'string' && !Array.isArray(children)) {
 		children = [children];
 	}
-	for (const child of children) {
+	for (let child of children) {
+		if(typeof child === 'string'){
+			child = document.createTextNode(child);
+		}
 		element.appendChild(child);
 	}
 	return element;

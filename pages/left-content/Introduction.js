@@ -8,6 +8,6 @@ export default createElement(
 	{ className: 'section introduction' },
 	[
 		Title(LeftContents.introduction.TITLE),
-		NormalDesc(LeftContents.introduction.DESC)
+		...NormalDesc(LeftContents.introduction.DESC)
 	]	
 );

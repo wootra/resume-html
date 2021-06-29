@@ -24,7 +24,7 @@
     grid-column: 2/3;
     display: grid;
     grid-template-columns: 1fr 300px;
-    grid-template-rows: 12em 1fr;
+    grid-template-rows: 12rem 1fr;
 }
 
 /* GridTop */
@@ -34,14 +34,15 @@
     position: relative;
 }
 
+/* ProfilePhoto */
 .profile-photo-container {
     display: block;
-    width: 10em;
-    height: 10em;
-    left: 1em;
-    top: 1em;
-    outline: 0.3em solid var(--profilePhotoBorderClr);
-    filter: drop-shadow(0 0 4em #e4eba8dc) blur(0);
+    width: 10rem;
+    height: 10rem;
+    left: 1rem;
+    top: 1rem;
+    outline: 0.3rem solid var(--profilePhotoBorderClr);
+    filter: drop-shadow(0 0 4rem #e4eba8dc) blur(0);
     position: relative;
 }
 
@@ -74,10 +75,10 @@ a:hover.profile-photo-container .profile-photo-top {
 	transition: all 1.3s ease;
     filter: blur(5px);
     opacity: 0.5;
-    left: -1em;
-    top: -1em;
-    width: 11.5em;
-    height: 11.5em;
+    left: -1rem;
+    top: -1rem;
+    width: 11.5rem;
+    height: 11.5rem;
 }
 
 a:hover.profile-photo-container .profile-photo-bottom {
@@ -91,9 +92,33 @@ a:hover.profile-photo-container .meditation-photo {
     opacity: 1;
 }
 
+/* NameAddress */
+.name-address-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 11rem);
+    height: 100%;
+    border: 1px dotted yellow; /* test */
+}
 
+.profile-name {
+    color: white;
+    text-align: right;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
 
-
+.profile-address {
+    color: white;
+    text-align: right;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    color: rgb(235, 235, 235);
+}
 
 /* --- left-content --- */
 /* GridLeft */
@@ -125,6 +150,7 @@ a:hover.profile-photo-container .meditation-photo {
 /* NormalDesc */
 .normal-desc {
     color: var( --txtDesc );
+    margin: 0;
 }
 
 /* sections */
