@@ -1,0 +1,31 @@
+
+[data-tooltip] {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    visibility: hidden;
+    /* width: 120px; */
+    background-color: rgba(65, 65, 65, 0.74);
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    border-radius: 6px;
+    font-size: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    left:0;
+    top:100%;
+    display:contents;
+    white-space: nowrap;
+    z-index: 1;
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+[data-tooltip]:hover::before {
+    visibility: visible;
+}

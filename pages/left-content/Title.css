@@ -1,0 +1,18 @@
+
+/* Title */
+.title {
+    color: var( --txtTitle );
+    position: relative;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    border-bottom: 2px solid var(--titleBottom);
+}

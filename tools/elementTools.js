@@ -1,9 +1,14 @@
 export const createElement = (name, attrs = {}, children = []) => {
 	const element = document.createElement(name);
 	for (const attrName in attrs) {
-		element[attrName] = attrs[attrName];
+		if(attrName.startsWith("data-")){
+			element.dataset[attrName.replace("data-","")] = attrs[attrName];
+		}else{
+			element[attrName] = attrs[attrName];
+		}
 	}
-	if (typeof children !== 'string' && !Array.isArray(children)) {
+	
+	if (typeof children === 'string' || !Array.isArray(children)) {
 		children = [children];
 	}
 	for (let child of children) {
