@@ -1,9 +1,17 @@
-/**
- * use this function only loading time.
- * for example, this will not work if you use in one of the function which is called after loading time.
- * @returns {string} filePath of script
- */
-export const getCurrentScriptFile = ()=>{
-    const scripts = document.getElementsByTagName("script");
-    return scripts[scripts.length-1].src;
+import { runFetch } from "./cssTools.js";
+import { getElementBySelector } from "./elementTools.js";
+import { registerLoadEvent } from "./loadingTools.js";
+
+console.log("currentScript:", document.currentScript);
+
+const TRY_COUNT = 10;
+const MAX_TRY = 100;
+export const setLoadEventForCss = (element, cssRelativePath, styleId ) => {
+    registerLoadEvent(element, () => {
+        console.log("eventHandler is called.")
+        runFetch("", cssRelativePath).then(res=>{
+            document.getElementById(styleId).innerHTML = res;
+        });
+    });
 }
+

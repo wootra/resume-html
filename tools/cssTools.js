@@ -6,7 +6,7 @@
  */
 export const runFetch = (dirPath, relPath) =>{
     const pathBefore = dirPath.substr(0, dirPath.lastIndexOf("/"));
-    console.log(pathBefore);
+    console.log({pathBefore});
     const url = `${pathBefore}/${relPath.replace("./","")}`
     return fetch(url)
     .then(response => response.body)
