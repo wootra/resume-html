@@ -18,7 +18,7 @@ const CompanyTitle = (companyName, url) => createElement('h3', {className: 'comp
 	createElement('a', {
 		href: url, 
 		target: '_blank', 
-		"aria-label": `link to ${companyName}`,
+		"ariaLabel": `link to ${companyName}`,
 		'data-url': `(${url})`,
 		'data-tooltip': `link to ${companyName} - ${url}`,
 		tooltip: `link to ${companyName}`,
