@@ -18,7 +18,7 @@ const buildCareer = (companyName, url, start, end, role, industry, jobTitle, tec
 /**
  * @type {{
  *  Introduction: {TITLE:string, DESC:string},
- *  Careers: {TITLE:string, CareerS:[CareerType] } 
+ *  Careers: {TITLE:string, CAREERS:[CareerType] } 
  * }}
  */
 
@@ -31,7 +31,7 @@ export const LeftContents = Object.freeze({
     }),
     Careers: Object.freeze({
         TITLE: "Careers",
-        CareerS: [
+        CAREERS: [
             buildCareer('USAA', 'http://usaa.com/', 
             [2018,9], null, 
             'Maintenance and improve of Financial Readiness/Wellness application', 

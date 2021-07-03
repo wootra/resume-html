@@ -9,7 +9,7 @@ const Careers = createElement(
 	{ className: 'section Careers' },
 	[
 		Title(LeftContents.Careers.TITLE),
-		...LeftContents.Careers.CareerS.map(info=>CareerBlock(info))
+		...LeftContents.Careers.CAREERS.map(info=>CareerBlock(info))
 	],
 );
 
