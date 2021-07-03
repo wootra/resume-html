@@ -9,15 +9,21 @@ const Position = createElement('h2', {className: 'profile-position'}, TopContent
 const Phone = createElement('div', {className: 'profile-phone'}, 
 	[
 		createImage('phone-icon.svg', {className: 'profile-phone-icon'}), 
-		TopContents.contact.phone
+		createElement('a', 
+			{
+				href: `tel:+1${TopContents.contact.phone.replace(/[\(\)-]/g,"")}`, 
+				"data-tooltip": `please call me`,
+			},
+			TopContents.contact.phone
+		)
+		
 	]);
 const Email = createElement('div', {className: 'profile-email'}, 
 	[
 		createImage('email-icon.svg', {className: 'profile-email-icon'}), 
 		createElement('a', {
-				href: `mailto:${TopContents.contact.email}?subject=We are interested in you`, 
+				href: `mailto:${TopContents.contact.email}?subject=Songhyeon, We are interested in you!`, 
 				"data-tooltip": `please send me an email`,
-				"data-email": TopContents.contact.email
 			},
 			TopContents.contact.email
 		)
