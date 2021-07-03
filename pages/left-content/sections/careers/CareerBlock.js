@@ -25,7 +25,7 @@ const CompanyTitle = (companyName, url) => createElement('h3', {className: 'comp
 	}, [companyName])
 );
 const CareerSpan = (start,end) => {
-	const endTxt = end && `${end[0]}.${assignDigits(end[1],2)}` || "NOW";
+	const endTxt = end && `${end[0]}.${assignDigits(end[1],2)}` || "CURRENT";
 	return createElement('span', {className: 'career-span'}, 
 		`${start[0]}.${assignDigits(start[1],2)}-${endTxt}`
 	);
