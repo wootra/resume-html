@@ -1,6 +1,6 @@
 import { createElement } from '../../tools/elementTools.js';
 import { setLoadEventForCss } from '../../tools/fileTools.js';
-import Careers from './sections/careers/Career.js';
+import Careers from './sections/careers/Careers.js';
 import Introduction from './sections/introduction/Introduction.js';
 
 const GridLeft = createElement(

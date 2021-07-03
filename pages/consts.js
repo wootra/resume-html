@@ -69,4 +69,12 @@ export const TopContents = Object.freeze({
     name: 'Songhyeon Jun',
     address: 'San Antonio, TX, 78261',
     position: 'Fullstack SW Engineer',
+    contact: {
+        phone: '(512)919-6009',
+        email: 'shjeon0730@gmail.com'
+    }, 
+    website: {
+        homepage: 'sh-jun.com',
+        github: 'https://github.com/wootra',
+    }
 })

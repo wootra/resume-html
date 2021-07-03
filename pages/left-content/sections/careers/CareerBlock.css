@@ -1,4 +1,4 @@
-.Career-block {
+.career-block {
     display: grid;
     grid-template-columns: 1fr 150px;
     color: black;
@@ -7,19 +7,18 @@
     position: relative;
 }
 
-.Career-block:not(:last-child)::after {
+.career-block:not(:last-child)::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
+    top: 100%;
     bottom: -0.6rem;
     border-bottom: 1px solid rgb(124, 179, 142);
-    
 }
 
 
-.Career-block p {
+.career-block p {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -57,7 +56,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.Career-span {
+.career-span {
     grid-column: 2/3;
     grid-row: 1/2;
     font-family: 'Oswald', sans-serif;
@@ -69,24 +68,24 @@
     margin-left: auto;
 }
 
-.Career-role {
+.career-role {
     grid-column: 1/3;
     font-size: 0.9rem;
 }
 
-.Career-industry {
+.career-industry {
     grid-column: 1/3;
     font-size: 0.8rem;
     color: rgb(221, 110, 6);
 }
 
-.Career-job-title {
+.career-job-title {
     grid-column: 1/3;
     font-size: 0.8rem;
     color: rgb(29, 119, 192);
 }
 
-.Career-tech-stack {
+.career-tech-stack {
     grid-column: 1/3;
     font-size: 0.7rem;
     color: rgb(122, 122, 122);

@@ -18,7 +18,7 @@
 }
 
 .profile-address {
-    margin-top: 0.25rem;
+    margin-top: -0.25rem;
     margin-bottom: 0;
     color: rgb(235, 235, 235);
     font-size: 0.8rem;
@@ -27,6 +27,109 @@
 .profile-position {
     margin-top: 0.5rem;
     margin-bottom: 0;
-    color: rgb(235, 235, 235);
-    font-size: 1rem;
+    color: rgb(219, 218, 163);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.profile-contacts {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.8rem;
+}
+
+.profile-phone {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-phone::before {
+    content:'';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    background-image: url(/images/phone-icon.svg);
+    background-size:cover;
+}
+
+.profile-phone::after {
+    content: " / ";
+}
+
+.profile-email {
+    position: relative;
+    margin-left: 1rem;
+}
+
+
+.profile-email::before {
+    position: absolute;
+    left: -0.9rem;
+    right: calc(100% - 0.1rem);
+    top: 0.1rem;
+    bottom: 0.1rem;
+    content: '';
+    background-image: url(/images/email-icon.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.name-address-container a:active, .name-address-container a:visited, .name-address-container a {
+    text-decoration: none;
+    color:rgb(180, 246, 255);
+    transition: all 1s;
+}
+
+.name-address-container a:hover {
+    text-decoration: underline;
+    color:rgb(239, 255, 180);
+    transition: all 1s;
+}
+
+.profile-websites {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.8rem;
+}
+
+.profile-homepage {
+    position: relative;
+}
+
+.profile-homepage::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 0.1rem;
+    right: calc(100% + 0.2rem);
+    bottom: 0.1rem;
+    background-image: url(/images/home-icon.svg);
+    background-size: cover;
+}
+
+.profile-homepage::after {
+    content: " / ";
+}
+
+.profile-github {
+    position: relative;
+    margin-left: 1.2rem;
+}
+
+.profile-github::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 0.1rem;
+    right: calc(100% - 0.1rem);
+    bottom: 0;
+    background-image: url(/images/github-icon.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
 }

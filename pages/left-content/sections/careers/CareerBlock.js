@@ -26,14 +26,14 @@ const CompanyTitle = (companyName, url) => createElement('h3', {className: 'comp
 );
 const CareerSpan = (start,end) => {
 	const endTxt = end && `${end[0]}.${assignDigits(end[1],2)}` || "NOW";
-	return createElement('span', {className: 'Career-span'}, 
+	return createElement('span', {className: 'career-span'}, 
 		`${start[0]}.${assignDigits(start[1],2)}-${endTxt}`
 	);
 }
-const Role = (role) => createElement('p', {className: 'Career-role', "data-tooltip": "Career role"}, role);
-const Industry = (ind) => createElement('p', {className: 'Career-industry', "data-tooltip": "industry"}, ind);
-const JobTitle = (title) => createElement('p', {className: 'Career-job-title', "data-tooltip": "job title"}, title);
-const TechStacks = (techs) => createElement('p', {className: 'Career-tech-stack', "data-tooltip": "tech stacks"}, 
+const Role = (role) => createElement('p', {className: 'career-role', "data-tooltip": "Career role"}, role);
+const Industry = (ind) => createElement('p', {className: 'career-industry', "data-tooltip": "industry"}, ind);
+const JobTitle = (title) => createElement('p', {className: 'career-job-title', "data-tooltip": "job title"}, title);
+const TechStacks = (techs) => createElement('p', {className: 'career-tech-stack', "data-tooltip": "tech stacks"}, 
 	techs.join(" / ")
 );
 
@@ -51,7 +51,7 @@ const TechStacks = (techs) => createElement('p', {className: 'Career-tech-stack'
  * }} info 
  */
 export const CareerBlock = (info) => {
-	return createElement('div', {className: 'Career-block'}, [
+	return createElement('div', {className: 'career-block'}, [
 		CompanyTitle(info.companyName, info.url),
 		CareerSpan(info.start, info.end),
 		Role(info.role),

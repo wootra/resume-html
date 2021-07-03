@@ -1,9 +1,10 @@
 import { createElement } from '../../../../tools/elementTools.js';
+import { setLoadEventForCss } from '../../../../tools/fileTools.js';
 import { LeftContents } from '../../../consts.js';
 import NormalDesc from '../../NormalDesc.js';
 import Title from '../../Title.js';
 
-export default createElement(
+const Introduction = createElement(
 	'div',
 	{ className: 'section introduction' },
 	[
@@ -11,3 +12,7 @@ export default createElement(
 		...NormalDesc(LeftContents.Introduction.DESC)
 	]	
 );
+
+setLoadEventForCss(Introduction, './pages/left-content/sections/introduction/Introduction.css', 'css/Introduction');
+
+export default Introduction;
