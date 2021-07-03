@@ -1,4 +1,4 @@
-import { createElement } from '../../tools/elementTools.js';
+import { createElement, createImage } from '../../tools/elementTools.js';
 import { setLoadEventForCss } from '../../tools/fileTools.js';
 import { TopContents } from '../consts.js';
 
@@ -6,32 +6,41 @@ const Name = createElement('h1', {className: 'profile-name'}, TopContents.name);
 const Address = createElement('h3', {className: 'profile-address'}, TopContents.address);
 const Position = createElement('h2', {className: 'profile-position'}, TopContents.position);
 
-const Phone = createElement('div', {className: 'profile-phone'}, TopContents.contact.phone);
+const Phone = createElement('div', {className: 'profile-phone'}, 
+	[
+		createImage('phone-icon.svg', {className: 'profile-phone-icon'}), 
+		TopContents.contact.phone
+	]);
 const Email = createElement('div', {className: 'profile-email'}, 
-	createElement('a', {
-			href: `mailto:${TopContents.contact.email}`, 
-			"data-tooltip": `please send me an email`,
-			"data-email": TopContents.contact.email
-		},
-		TopContents.contact.email
-	)
-);
+	[
+		createImage('email-icon.svg', {className: 'profile-email-icon'}), 
+		createElement('a', {
+				href: `mailto:${TopContents.contact.email}?subject=We are interested in you`, 
+				"data-tooltip": `please send me an email`,
+				"data-email": TopContents.contact.email
+			},
+			TopContents.contact.email
+		)
+	]);
 const Contact = createElement('div', {className: 'profile-contacts'}, 
 	[Email, Phone]
 );
 
-const createLinkDiv = (url,className,content) => createElement('div', {className}, 
-	createElement('a', {
-		href: `mailto:${url}`, 
-		target: "_blank",
-		"data-tooltip": `move to ${url}`
-	},
-	content
-	)
-)
+const createLinkDiv = (url,className,content, iconFile, iconClass) => createElement('div', {className}, 
+	[
+		createImage(iconFile, {className: iconClass}), 
+		createElement(
+			'a', {
+				href: `${url}`, 
+				target: "_blank",
+				"data-tooltip": `move to ${url}`
+			},
+			content
+		)
+	])
 
-const GitHub = createLinkDiv(TopContents.website.github, 'profile-github', TopContents.website.github);
-const HomePage = createLinkDiv(TopContents.website.homepage, 'profile-homepage', TopContents.website.homepage);
+const GitHub = createLinkDiv(TopContents.website.github, 'profile-github', TopContents.website.github, 'github-icon.svg', 'profile-github-icon');
+const HomePage = createLinkDiv(TopContents.website.homepage, 'profile-homepage', TopContents.website.homepage, 'home-icon.svg', 'profile-home-icon');
 
 const WebSites = createElement('div', {className: 'profile-websites'}, 
 	[GitHub, HomePage]
