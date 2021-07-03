@@ -1,10 +1,24 @@
 .carrier-block {
     display: grid;
     grid-template-columns: 1fr 150px;
-    grid-template-rows: 3rem repeat(auto-fill, 1rem);
     color: black;
     width: 100%;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+    position: relative;
 }
+
+.carrier-block:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -0.6rem;
+    border-bottom: 1px solid rgb(124, 179, 142);
+    
+}
+
 
 .carrier-block p {
     margin-top: 0;
@@ -17,9 +31,8 @@
     font-weight: bold;
     position: relative;
     grid-column: 1/2;
-    grid-row: 1/2;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
 }
 
 .company-title a {
@@ -59,27 +72,23 @@
 
 .carrier-role {
     grid-column: 1/3;
-    grid-row: 2/3;
     font-size: 0.9rem;
 }
 
 .carrier-industry {
     grid-column: 1/3;
-    grid-row: 3/4;
     font-size: 0.8rem;
     color: rgb(221, 110, 6);
 }
 
 .carrier-job-title {
     grid-column: 1/3;
-    grid-row: 4/5;
     font-size: 0.8rem;
     color: rgb(29, 119, 192);
 }
 
 .carrier-tech-stack {
     grid-column: 1/3;
-    grid-row: 6/7;
     font-size: 0.7rem;
     color: rgb(122, 122, 122);
 }

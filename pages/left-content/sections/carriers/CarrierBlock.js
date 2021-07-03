@@ -24,9 +24,12 @@ const CompanyTitle = (companyName, url) => createElement('h3', {className: 'comp
 		tooltip: `link to ${companyName}`,
 	}, [companyName])
 );
-const CarrierSpan = (start,end) => createElement('span', {className: 'carrier-span'}, 
-	`${start[0]}.${assignDigits(start[1],2)}-${end[0]}.${assignDigits(end[1],2)}`
-);
+const CarrierSpan = (start,end) => {
+	const endTxt = end && `${end[0]}.${assignDigits(end[1],2)}` || "NOW";
+	return createElement('span', {className: 'carrier-span'}, 
+		`${start[0]}.${assignDigits(start[1],2)}-${endTxt}`
+	);
+}
 const Role = (role) => createElement('p', {className: 'carrier-role', "data-tooltip": "carrier role"}, role);
 const Industry = (ind) => createElement('p', {className: 'carrier-industry', "data-tooltip": "industry"}, ind);
 const JobTitle = (title) => createElement('p', {className: 'carrier-job-title', "data-tooltip": "job title"}, title);

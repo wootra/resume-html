@@ -32,7 +32,22 @@ export const LeftContents = Object.freeze({
     Carriers: Object.freeze({
         TITLE: "Carriers",
         CARRIERS: [
-            buildCarrier('eonic korea', 'http://eonic.co.kr/', 
+            buildCarrier('USAA', 'http://usaa.com/', 
+            [2018,9], null, 
+            'Maintenance and improve of Financial Readiness/Wellness application', 
+            'Financial / Insurance', 
+            'SW Engineer I', 
+            [
+                'React',       'Java',
+                'Redux',       'Javascript',
+                'RESTful API(JAX-rs/Spring boot)',
+                'HTML',        'CSS',
+                'Openshift',   'gitlab-ci',
+                'Mocha',       'Jest',
+                'Mochito',     'Enzyme',
+                'Cypress',     'Spock'
+            ]),
+            buildCarrier('Eonic Korea', 'http://eonic.co.kr/', 
             [2016,7], [2018,3], 
             'Analysis Signal & UI/UX Design and Developing', 
             'Sonar / Defense systems', 
@@ -44,7 +59,8 @@ export const LeftContents = Object.freeze({
                 'HTML',        'Python',
                 'MATLAB',      'Intel IPP',
                 'Linux',       'Windows'
-            ])
+            ]),
+            
         ]
     })
 });
