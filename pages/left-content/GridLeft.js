@@ -10,6 +10,6 @@ const GridLeft = createElement(
 	[Introduction, Carriers]
 );
 
-setLoadEventForCss(GridLeft, './pages/left-content/sections/CarrierBlock.css', 'CarrierBlock');
+setLoadEventForCss(GridLeft, './pages/left-content/sections/CarrierBlock.css', './pages/left-content/sections/CarrierBlock.css');
 
 export default GridLeft;

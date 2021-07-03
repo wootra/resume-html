@@ -9,9 +9,7 @@ const MAX_TRY = 100;
 export const setLoadEventForCss = (element, cssRelativePath, styleId ) => {
     registerLoadEvent(element, () => {
         console.log("eventHandler is called.")
-        runFetch("", cssRelativePath).then(res=>{
-            document.getElementById(styleId).innerHTML = res;
-        });
+        document.getElementById(styleId).href = cssRelativePath;
     });
 }
 
