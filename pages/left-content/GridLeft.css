@@ -1,7 +1,5 @@
 /* GridLeft */
 .grid-left {
-    grid-row: 2/3;
-    grid-column: 1/2;
     background-color: var(--bgWhite);
     padding: 0.5em;
     background-color: var(--sectionBack);
