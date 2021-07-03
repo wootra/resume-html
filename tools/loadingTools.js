@@ -57,6 +57,7 @@ window.addEventListener('load', ()=>{
         }
         if(Object.keys(loadingQueue.value).length === 0){
             clearInterval(__loadingToolCheckerId);
+            console.log("all event handler is removed.")
         }
     }, 250)
 })

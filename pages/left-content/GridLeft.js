@@ -1,15 +1,15 @@
 import { createElement } from '../../tools/elementTools.js';
 import { setLoadEventForCss } from '../../tools/fileTools.js';
-import Carriers from './sections/Carriers.js';
-import Introduction from './sections/Introduction.js';
-const filePath = document.currentScript;
-console.log({filePath});
+import Carriers from './sections/carriers/Carriers.js';
+import Introduction from './sections/introduction/Introduction.js';
+
 const GridLeft = createElement(
 	'div',
 	{ className: 'grid-left' },
 	[Introduction, Carriers]
 );
 
-setLoadEventForCss(GridLeft, './pages/left-content/sections/CarrierBlock.css', './pages/left-content/sections/CarrierBlock.css');
+setLoadEventForCss(GridLeft, './pages/left-content/Title.css', 'css/Title');
+setLoadEventForCss(GridLeft, './pages/left-content/NormalDesc.css', 'css/NormalDesc');
 
 export default GridLeft;
