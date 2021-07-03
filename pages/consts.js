@@ -74,7 +74,7 @@ export const TopContents = Object.freeze({
         email: 'shjeon0730@gmail.com'
     }, 
     website: {
-        homepage: 'sh-jun.com',
+        homepage: 'https://sh-jun.com',
         github: 'https://github.com/wootra',
     }
 })

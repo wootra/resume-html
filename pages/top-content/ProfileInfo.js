@@ -41,7 +41,7 @@ const createLinkDiv = (url,className,content, iconFile, iconClass) => createElem
 				target: "_blank",
 				"data-tooltip": `move to ${url}`
 			},
-			content
+			content.replace("https://","").replace("http://","")
 		)
 	])
 
