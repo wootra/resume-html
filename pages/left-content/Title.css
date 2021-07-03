@@ -10,9 +10,10 @@
 .title::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: calc(100% + 4px);
     left: 0;
     right: 0;
-    bottom: -5px;
-    border-bottom: 2px solid var(--titleBottom);
+    bottom: -6px;
+    background-color: var(--titleBottom);
+    background-color: var(--titleBottomGradient);
 }

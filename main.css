@@ -4,7 +4,8 @@
     --bgWhite: white;
     --txtTitle: #70ad47;
     --txtDesc: black;
-    --titleBottom: rgb(4, 116, 0);
+    --titleBottom: rgb(12,138,40);
+    --titleBottomGradient: linear-gradient(90deg, rgba(12,138,40,1) 0%, rgba(12,138,40,0) 68%);
     --sectionBack: rgb(245, 245, 245);
     --profilePhotoBorderClr: rgb(39, 104, 158);
 }

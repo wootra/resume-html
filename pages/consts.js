@@ -8,17 +8,17 @@
  * industry: string,
  * jobTitle: string,
  * techStacks: [string]
- * }} CarrierType
+ * }} CareerType
  */
 
-const buildCarrier = (companyName, url, start, end, role, industry, jobTitle, techStacks) => ({
+const buildCareer = (companyName, url, start, end, role, industry, jobTitle, techStacks) => ({
     companyName, url, start, end, role, industry, jobTitle, techStacks
 })
 
 /**
  * @type {{
  *  Introduction: {TITLE:string, DESC:string},
- *  Carriers: {TITLE:string, CARRIERS:[CarrierType] } 
+ *  Careers: {TITLE:string, CareerS:[CareerType] } 
  * }}
  */
 
@@ -29,10 +29,10 @@ export const LeftContents = Object.freeze({
         Having fun improving existing software. 
         BS in Computer Science, 10+ years of full-stack development experiences including RT/multi-thread handling as well as enterprise services/clients.`
     }),
-    Carriers: Object.freeze({
-        TITLE: "Carriers",
-        CARRIERS: [
-            buildCarrier('USAA', 'http://usaa.com/', 
+    Careers: Object.freeze({
+        TITLE: "Careers",
+        CareerS: [
+            buildCareer('USAA', 'http://usaa.com/', 
             [2018,9], null, 
             'Maintenance and improve of Financial Readiness/Wellness application', 
             'Financial / Insurance', 
@@ -47,7 +47,7 @@ export const LeftContents = Object.freeze({
                 'Mochito',     'Enzyme',
                 'Cypress',     'Spock'
             ]),
-            buildCarrier('Eonic Korea', 'http://eonic.co.kr/', 
+            buildCareer('Eonic Korea', 'http://eonic.co.kr/', 
             [2016,7], [2018,3], 
             'Analysis Signal & UI/UX Design and Developing', 
             'Sonar / Defense systems', 
