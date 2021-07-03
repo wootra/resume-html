@@ -57,3 +57,13 @@ export const getElementBySelector = selector => {
 		throw new Error(`${selector} is an invalid selector`)
 	}
 }
+
+export const replaceChild = (element, child) => {
+	for(const node of element.childNodes){
+		element.removeChild(node);
+	}
+	for(const node of element.children){
+		element.removeChild(node);
+	}
+	element.appendChild(child);
+}
