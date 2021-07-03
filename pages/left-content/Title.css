@@ -12,8 +12,7 @@
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
-    right: 0;
+    right: -20%;
     bottom: -6px;
-    background-color: var(--titleBottom);
-    background-color: var(--titleBottomGradient);
+    background-image: linear-gradient(90deg, rgba(12,138,40,1) 0%, rgba(12,138,40,1) 60%, rgba(12,138,40,0) 100%);
 }

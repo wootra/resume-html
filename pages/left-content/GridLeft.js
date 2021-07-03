@@ -9,6 +9,7 @@ const GridLeft = createElement(
 	[Introduction, Careers]
 );
 
+setLoadEventForCss(GridLeft, './pages/left-content/GridLeft.css', 'css/GridLeft');
 setLoadEventForCss(GridLeft, './pages/left-content/Title.css', 'css/Title');
 setLoadEventForCss(GridLeft, './pages/left-content/NormalDesc.css', 'css/NormalDesc');
 
