@@ -13,6 +13,6 @@ const Careers = createElement(
 	],
 );
 
-setLoadEventForCss(Careers, './pages/left-content/sections/Careers/CareerBlock.css', 'css/CareerBlock');
+setLoadEventForCss(Careers, './pages/left-content/sections/careersCareerBlock.css', 'css/CareerBlock');
 
 export default Careers;
