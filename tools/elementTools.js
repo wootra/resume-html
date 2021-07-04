@@ -33,29 +33,42 @@ export const createImage = (src, attrs={}) => {
 }
 
 /**
+ * 
+ * @param {Element} element 
+ * @returns 
+ */
+const isDisplayNone = element => {
+	if(element.tagName === 'BODY') return false;
+	const computedStyle = window.getComputedStyle(element);
+	console.log("isDisplayNone:", element.tagName, element.className, computedStyle.display)
+	if(computedStyle.display === 'none') return true;
+	else return isDisplayNone(element.parentNode);
+}
+
+/**
+ * 
+ * @param {HTMLCollection} elements 
+ * @returns 
+ */
+const getOnlyVisibleElements = elements => {
+	if(!elements) return [];
+	const childrenToRet = [];
+	
+	for(let n=0; n<elements.length; n++){
+		!isDisplayNone(elements[n]) && childrenToRet.push(elements[n]);
+	}
+	console.log(elements, elements[0], childrenToRet);
+	return childrenToRet;
+}
+
+/**
  * @param {string} selector
  * @returns {[Element]}
  */
-export const getElementBySelector = selector => {
-	const numOfSymbols = selector.split('').filter(c=>"#.".includes(c)).length;
-
-	if(numOfSymbols > 1){
-		throw new Error(`${selector} must be multi-depth selector. not supported`)
-	}else if(numOfSymbols === 1 && !(selector.startsWith('.') || selector.startsWith('#'))){
-		// the case like div.my-class
-		throw new Error(`${selector} must be multi-depth selector. not supported`)
-	}
-
-	if(selector.startsWith("#")) {
-		const ret = document.getElementById(selector.replace("#",""));
-		return ret.length === undefined ? [ret] : ret;
-	}else if(selector.startsWith(".")) {
-		return document.getElementsByClassName(selector.replace(".",""));
-	}else if(selector[0].match(/[a-zA-Z]{1}/).length > 0) {
-		return document.getElementsByTagName(selector);
-	}else {
-		throw new Error(`${selector} is an invalid selector`)
-	}
+export const getElementBySelector = (selector, includingHidden=false) => {
+	const ret = document.querySelectorAll(selector);
+	console.log("getElementBySelector - ", selector, ret)
+	return ret && includingHidden ? ret : getOnlyVisibleElements(ret);
 }
 
 export const replaceChild = (element, child) => {

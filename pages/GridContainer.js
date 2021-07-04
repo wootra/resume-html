@@ -10,6 +10,6 @@ const GridContainer = createElement(
 	[GridTop, GridLeft, GridRight]
 );
 
-setLoadEventForCss(root, './pages/GridContainer.css', 'css/GridContainer');
+setLoadEventForCss(GridContainer, './pages/GridContainer.css', 'css/GridContainer');
 
 export default GridContainer;

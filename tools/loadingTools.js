@@ -8,15 +8,26 @@ const loadingQueue = {
 };
 
 /**
+ * @type {{value: Object.<string, [function]>}}
+ */
+ const loadingQueueOnce = {
+    value: {}
+};
+
+/**
+ * this function has very limited functionality only for id and class definitions.
+ * do not use this for the general purpose.
  * 
  * @param {Element} element 
  * @returns 
  */
 const getUniqInfo = element => {
     if(element.id) return "#"+element.id;
-    if(element.className) return "."+element.className;
-    console.trace(element);
-    throw new Error(`invalid: ${element} to register event, you need to set className or id on the element`);
+    if(element.className) {
+        const classSelector = "."+element.className.replace(/[ ]{2,}/g, " ").split(" ").join(".");
+        console.log({classSelector});
+        return classSelector;
+    }
 }
 
 /**
@@ -29,35 +40,93 @@ export const registerLoadEvent = (element, onLoadCallback )=>{
     if(!loadingQueue.value[selector]){
         loadingQueue.value[selector] = []; //create a list.
     }
+    
+    //when no same callback existing in the array, add one.
     loadingQueue.value[selector].filter(
         callback=>callback === onLoadCallback
     ).length === 0  && loadingQueue.value[selector].push(onLoadCallback);
 }
 
-window.addEventListener('load', ()=>{
-    var __loadingToolCheckerId = setInterval(()=>{
-        for(const selector in loadingQueue.value){
-            if(loadingQueue.value[selector].length === 0) continue;
+/**
+ * register the callback for onLoadCallback
+ * @param {Element} element 
+ * @param {function(Element)} onLoadCallback 
+ */
+ export const registerLoadEventOnce = (element, onLoadCallback )=>{
+    registerLoadEvent(element, onLoadCallback);
+    // const selector = getUniqInfo(element);
+    // if(!loadingQueueOnce.value[selector]){
+    //     loadingQueueOnce.value[selector] = []; //create a list.
+    // }
+    
+    // //when no same callback existing in the array, add one.
+    // loadingQueueOnce.value[selector].filter(
+    //     callback=>callback === onLoadCallback
+    // ).length === 0  && loadingQueueOnce.value[selector].push(onLoadCallback);
 
-            const elements = getElementBySelector(selector);
-            if(elements.length > 0){
-                loadingQueue.value[selector].forEach(evHandler=>{
-                    evHandler(elements)
-                });
-                while(loadingQueue.value[selector].length>0) loadingQueue.value[selector].pop();
-            }
+    // console.log("registered for once --->", loadingQueueOnce);
+}
+
+
+var __widthChangeHandlerId = -1;
+var __savedInnerWidth = -1;
+
+let __monitoringStarted = false;
+
+const mutationCallback = (mutationsList, observer)=>{
+    mutationsList ? console.log("mutated", mutationsList) : console.log("size-changed");
+    const loadingQueueValue = loadingQueue.value;
+    for(const selector in loadingQueueValue){
+        // const selector = getUniqInfo(element);
+        if(!(loadingQueueValue[selector]?.length > 0)) continue;
+
+        const elements = getElementBySelector(selector);
+        
+        if(elements.length > 0){
+            console.log("running event handler for ", selector)
+            loadingQueueValue[selector].forEach(evHandler=>{
+                evHandler(elements)
+            });
+            while(loadingQueueValue[selector].length>0) loadingQueueValue[selector].pop();
         }
-        const emptyQueues = Object.keys(loadingQueue.value).filter(s=>loadingQueue.value[s].length===0);
-        if(emptyQueues.length > 0){
-            const newObj = {};
-            for(const selector in loadingQueue.value){
-                if(!emptyQueues.includes(selector)) newObj[selector] = loadingQueue.value[selector];
-            }
-            loadingQueue.value = newObj;
+    }
+    const emptyQueues = Object.keys(loadingQueueValue).filter(s=>loadingQueueValue[s].length===0);
+    if(emptyQueues.length > 0){
+        const newObj = {};
+        for(const selector in loadingQueueValue){
+            if(!emptyQueues.includes(selector)) newObj[selector] = loadingQueue.value[selector];
         }
-        if(Object.keys(loadingQueue.value).length === 0){
-            clearInterval(__loadingToolCheckerId);
-            console.log("all event handler is removed.")
+        loadingQueue.value = newObj;
+    }
+    console.log("loading-queue", loadingQueue.value)
+};
+
+var __windowMutationObserver = new MutationObserver(mutationCallback);
+
+const config = { attributes: true, childList: true, subtree: true };
+__windowMutationObserver.observe(document, config);
+
+export const startMonitoring = (initPageCallback)=>{
+    if(__monitoringStarted) {
+        throw new Error("startMonitoring should be called only once");
+    }
+    __monitoringStarted = true;
+    
+    window.addEventListener("resize", ()=>{
+        if(__widthChangeHandlerId < 0){
+            __widthChangeHandlerId = setTimeout(()=>{
+                if(window.innerWidth !== __savedInnerWidth){
+                    __savedInnerWidth = window.innerWidth;
+                    mutationCallback();
+                }
+                __widthChangeHandlerId = -1;
+            }, 250);
         }
-    }, 250)
-})
+    })
+
+    window.addEventListener('load', ()=>{
+        console.log("document is ready")
+
+        initPageCallback();
+    });
+}
