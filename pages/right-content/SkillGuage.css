@@ -1,9 +1,10 @@
 .skill-guage {
     width: calc( 100% - 2rem );
     position: relative;
-    background-color: rgba(231, 231, 231, 0.253);
+    background-color: var(--skill-gauge-back);
     border-radius: 0.2rem;;
     margin-bottom: 0.3rem;
+    padding-left: 1rem;
 }
 
 .skill-name {

@@ -7,6 +7,8 @@
     --titleBottom: rgb(12,138,40);
     --sectionBack: rgb(245, 245, 245);
     --profilePhotoBorderClr: rgb(39, 104, 158);
+    --skill-group-back: rgb(0, 68, 88);
+    --skill-gauge-back: rgba(187, 187, 187, 0.253);
 }
 
 @keyframes loading {

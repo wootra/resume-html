@@ -76,12 +76,18 @@ export const getElementBySelector = (selector, includingHidden=false) => {
  * @param {[Element]} children 
  */
 export const replaceChildren = (element, children=[]) => {
-	for(const node of element.childNodes){
-		element.removeChild(node);
-	}
+	const itemsToRemove = [];
 	for(const node of element.children){
-		element.removeChild(node);
+		itemsToRemove.push(node);
 	}
+	itemsToRemove.forEach(node=>{
+		try{
+			element.removeChild(node);
+		}catch(e){
+			console.log("removing:"+node+" has been failed:", e)
+		}
+		
+	})
 	!Array.isArray(children) && (children = [children])
 	children.forEach(el=>{
 		element.appendChild(el);

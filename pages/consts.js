@@ -97,18 +97,35 @@ export const RightContents = Object.freeze({
             buildSkillLevel("Java", 5),
             buildSkillLevel("C/C++", 5),
             buildSkillLevel("Python", 5),
+            buildSkillLevel("NodeJs", 4),
+            buildSkillLevel("LUA", 4),
+            buildSkillLevel("JPA", 3),
+            buildSkillLevel("SASS/LESS", 3),
+        ],
+        ShellScripts:[
             buildSkillLevel("bash-sh", 4),
             buildSkillLevel("cmd-sh", 3),
-            buildSkillLevel("SASS/LESS", 3),
+        ],
+        "Multimedia/Office":[
+            buildSkillLevel("Flash/Action Script", 5),
+            buildSkillLevel("Photoshop", 4),
+            buildSkillLevel("Illustrator", 4),
+            buildSkillLevel("Excel", 4),
+            buildSkillLevel("PowerPoint", 4),
+            buildSkillLevel("Word", 3),
+        ],
+        AnalysisTools: [
+            buildSkillLevel("Lab Windows/CVI", 5),
+            buildSkillLevel("Matlab", 4),
+            buildSkillLevel("TemsorFlow/Keras", 3),
+            buildSkillLevel("Jupiter Notebook", 3),
+            buildSkillLevel("Labview", 3),
         ],
         frameworks: [
             buildSkillLevel("React Hooks", 5),
             buildSkillLevel("React/Redux", 5),
-            buildSkillLevel("Gialb-ci", 4),
             buildSkillLevel("Jax-RS", 3),
             buildSkillLevel("Spring Boot", 3),
-            buildSkillLevel("Keras", 3),
-            buildSkillLevel("Jupiter Notebook", 3),
             buildSkillLevel("Angular 6", 2),
         ],
         test: [
@@ -117,14 +134,27 @@ export const RightContents = Object.freeze({
             buildSkillLevel("Enzyme", 5),
             buildSkillLevel("sinon", 5),
             buildSkillLevel("sinon", 5),
+            buildSkillLevel("Selenium", 4),
             buildSkillLevel("cypress", 5),
             buildSkillLevel("Spock", 3),
         ],
         database: [
             buildSkillLevel("My-SQL", 4),
+            buildSkillLevel("MS-SQL", 4),
             buildSkillLevel("DB2", 4),
             buildSkillLevel("Mongo DB", 3),
-        ]
+        ],
+        DevOps: [
+            buildSkillLevel("Gialb-ci", 4),
+            buildSkillLevel("Docker", 3),
+        ],
+        Network: [
+            buildSkillLevel("TCP/IP, UDP", 5),
+            buildSkillLevel("RS-232/RS-422/MIL1553", 4),
+            buildSkillLevel("Analog/Discrete", 4),
+            buildSkillLevel("GPS/GNSS", 3),
+            buildSkillLevel("I2C", 3),
+        ],
     }
         
 })

@@ -5,7 +5,7 @@
 
 .skill-group {
     width: 100%;
-    background-color: rgba(81, 143, 224, 0.596);
+    background-color: var(--skill-group-back);
     position: relative;
     margin-bottom: 0.5rem;
     border-radius: 0.5rem;
@@ -19,6 +19,7 @@
 
 .skill-group-header {
     padding-top: 0.1rem;
+    pointer-events: none;
 }
 
 .skill-group::after {
@@ -36,16 +37,19 @@
 }
 
 .skill-group-panel {
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: 0.5rem;
-    max-height: 5rem;
-    overflow:scroll;
+    display: block;
+    overflow-y:scroll;
+    
 }
 
 .skill-group .skill-group-panel {
-    display: block;
+    transition: max-height 0.2s ease-in;
+    max-height: 5rem;
 }
 
 .skill-group.shrunk .skill-group-panel {
-    display: none;
+    transition: max-height 0.2s ease-in;
+    max-height: 0;
 }

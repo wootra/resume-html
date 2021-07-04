@@ -8,12 +8,24 @@ const skillPanelName = groupName => `skill-panel-for-${groupName}`;
 const GroupHeader = groupName => createElement('div', 
 	{
 		className: `skill-group-header skill-header-for-${groupName}`,
+		
+	},
+	groupName
+)
+
+const GroupPanel = (groupName)=>{
+	return createElement('div', {className: "skill-group-panel", id:skillPanelName(groupName)})
+}
+
+const SkillGroup = (groupName) => createElement('div', 
+	{
+		className: `skill-group skill-group-for-${groupName} shrunk`,
 		onclick : (e)=>{
 			console.log("onClick");
 			
-			e.target.parentNode.classList.toggle('shrunk');
+			e.target.classList.toggle('shrunk');
 			// import("./SkillGuage.js").then(SkillGuage => {
-				if(!e.target.parentNode.classList.contains('shrunk')){
+				if(!e.target.classList.contains('shrunk')){
 					const panel = document.getElementById(skillPanelName(groupName));
 					const newElements = RightContents.skillLevels[groupName].map(
 						obj=>SkillGuage(obj.skillName, obj.levelNo)
@@ -23,15 +35,7 @@ const GroupHeader = groupName => createElement('div',
 				}
 			// });
 		}
-	},
-	groupName
-)
-
-const GroupPanel = (groupName)=>{
-	return createElement('div', {className: "skill-group-panel", id:skillPanelName(groupName)})
-}
-
-const SkillGroup = (groupName) => createElement('div', {className: `skill-group skill-group-for-${groupName} shrunk`}, 
+	}, 
 	[GroupHeader(groupName), GroupPanel(groupName)]
 )
 
@@ -41,7 +45,9 @@ const SkillList = createElement('div',{className: 'skill-list'},
 
 const SkillLevels = createElement(
 	'div',
-	{ className: 'skill-levels' },
+	{ 
+		className: 'skill-levels',
+	},
 	[Title("Skill Levels"), SkillList]
 );
 
