@@ -71,12 +71,21 @@ export const getElementBySelector = (selector, includingHidden=false) => {
 	return ret && includingHidden ? ret : getOnlyVisibleElements(ret);
 }
 
-export const replaceChild = (element, child) => {
+/**
+ * 
+ * @param {Element} element 
+ * @param {[Element]} children 
+ */
+export const replaceChildren = (element, children=[]) => {
 	for(const node of element.childNodes){
 		element.removeChild(node);
 	}
 	for(const node of element.children){
 		element.removeChild(node);
 	}
-	element.appendChild(child);
+	!Array.isArray(children) && (children = [children])
+	children.forEach(el=>{
+		element.appendChild(el);
+	})
+	
 }

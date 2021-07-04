@@ -1,0 +1,51 @@
+
+.skill-levels {
+    margin-top: -0.5rem;
+}
+
+.skill-group {
+    width: 100%;
+    background-color: rgba(81, 143, 224, 0.596);
+    position: relative;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    min-height: 1.5rem;
+    text-transform: capitalize;
+}
+
+.skill-group > * {
+    margin-left: 1rem;
+}
+
+.skill-group-header {
+    padding-top: 0.1rem;
+}
+
+.skill-group::after {
+    position: absolute;
+    left: calc(100%-1rem);
+    right: 0;
+    top: -0.2rem;
+    bottom: 0;
+    content: '⬆️';
+    pointer-events: none;
+}
+
+.skill-group.shrunk::after {
+    content: '⬇️';
+}
+
+.skill-group-panel {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    max-height: 5rem;
+    overflow:scroll;
+}
+
+.skill-group .skill-group-panel {
+    display: block;
+}
+
+.skill-group.shrunk .skill-group-panel {
+    display: none;
+}

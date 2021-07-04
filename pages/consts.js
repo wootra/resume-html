@@ -78,3 +78,53 @@ export const TopContents = Object.freeze({
         github: 'https://github.com/wootra',
     }
 })
+
+const buildSkillLevel = (skillName, levelNo) => ({skillName, levelNo})
+
+/**
+ * @typedef {{skillName:string, levelNo:number}} SkillObj
+ */
+
+/**
+ * @type {{skillLevels: Object<string, [SkillObj]>}}
+ */
+export const RightContents = Object.freeze({
+    skillLevels: {
+        languages: [
+            buildSkillLevel("Javascript", 5),
+            buildSkillLevel("HTML", 5),
+            buildSkillLevel("CSS", 5),
+            buildSkillLevel("Java", 5),
+            buildSkillLevel("C/C++", 5),
+            buildSkillLevel("Python", 5),
+            buildSkillLevel("bash-sh", 4),
+            buildSkillLevel("cmd-sh", 3),
+            buildSkillLevel("SASS/LESS", 3),
+        ],
+        frameworks: [
+            buildSkillLevel("React Hooks", 5),
+            buildSkillLevel("React/Redux", 5),
+            buildSkillLevel("Gialb-ci", 4),
+            buildSkillLevel("Jax-RS", 3),
+            buildSkillLevel("Spring Boot", 3),
+            buildSkillLevel("Keras", 3),
+            buildSkillLevel("Jupiter Notebook", 3),
+            buildSkillLevel("Angular 6", 2),
+        ],
+        test: [
+            buildSkillLevel("Jest", 5),
+            buildSkillLevel("Mocha", 5),
+            buildSkillLevel("Enzyme", 5),
+            buildSkillLevel("sinon", 5),
+            buildSkillLevel("sinon", 5),
+            buildSkillLevel("cypress", 5),
+            buildSkillLevel("Spock", 3),
+        ],
+        database: [
+            buildSkillLevel("My-SQL", 4),
+            buildSkillLevel("DB2", 4),
+            buildSkillLevel("Mongo DB", 3),
+        ]
+    }
+        
+})

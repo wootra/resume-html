@@ -5,6 +5,7 @@
     position: relative;
     margin-bottom: 10px;
     display: inline-block;
+    font-size: 1.35em;
 }
 
 .title::after {
