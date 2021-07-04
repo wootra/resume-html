@@ -1,5 +1,5 @@
 import { createElement } from "./elementTools.js";
-import { registerLoadEvent, registerLoadEventOnce } from "./loadingTools.js";
+import { registerLoadEvent } from "./loadingTools.js";
 
 /**
  * 
@@ -10,13 +10,15 @@ import { registerLoadEvent, registerLoadEventOnce } from "./loadingTools.js";
 export const setLoadEventForCss = (element, cssRelativePath, styleId ) => {
     registerLoadEvent(element, () => {
         const styleLinkHolder = document.getElementById(styleId);
-        console.log("adding style id:", styleId);
         if(!styleLinkHolder){
-            console.log("adding style id creating new:", styleId);
             document.head.appendChild(createElement("link", {rel:"stylesheet", id: styleId, href: cssRelativePath}));
         }else{
-            console.log("adding style id adding in exising:", styleId);
-            document.getElementById(styleId).href = cssRelativePath;
+            let existingHref = document.getElementById(styleId).href;
+            existingHref = existingHref.replace(/https?:\/\/[a-z.:0-9]+\//,"");
+            if(existingHref !== cssRelativePath.replace("./","")) {
+                //prevent same css is loaded occuring re-render of DOM
+                document.getElementById(styleId).href = cssRelativePath;
+            }
         }
     });
 }
