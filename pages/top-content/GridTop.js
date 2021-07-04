@@ -1,7 +1,7 @@
 import { createElement } from '../../tools/elementTools.js';
 import ProfilePhoto from './ProfilePhoto.js';
 import ProfileInfo from './ProfileInfo.js';
-import { setLoadEventForCssOnce, setLoadEventForCss } from '../../tools/fileTools.js';
+import { setLoadEventForCss } from '../../tools/fileTools.js';
 
 const PhotoArea = createElement(
 	'div',

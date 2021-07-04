@@ -2,14 +2,7 @@ import Title from '../left-content/Title.js';
 import { createElement, replaceChildren } from '../../tools/elementTools.js';
 import { setLoadEventForCss } from '../../tools/fileTools.js';
 import { RightContents } from '../consts.js';
-
-const SkillGuage = (skillName, skillPt) => createElement('div', {className: 'skill-guage'}, 
-	[
-		document.createTextNode(skillName),
-		document.createTextNode(skillPt)
-	]
-)
-
+import SkillGuage from "./SkillGuage.js";
 const skillPanelName = groupName => `skill-panel-for-${groupName}`;
 
 const GroupHeader = groupName => createElement('div', 
@@ -17,15 +10,18 @@ const GroupHeader = groupName => createElement('div',
 		className: `skill-group-header skill-header-for-${groupName}`,
 		onclick : (e)=>{
 			console.log("onClick");
+			
 			e.target.parentNode.classList.toggle('shrunk');
-			if(!e.target.parentNode.classList.contains('shrunk')){
-				const panel = document.getElementById(skillPanelName(groupName));
-				replaceChildren(panel, 
-					RightContents.skillLevels[groupName].map(
+			// import("./SkillGuage.js").then(SkillGuage => {
+				if(!e.target.parentNode.classList.contains('shrunk')){
+					const panel = document.getElementById(skillPanelName(groupName));
+					const newElements = RightContents.skillLevels[groupName].map(
 						obj=>SkillGuage(obj.skillName, obj.levelNo)
-					)
-				)
-			}
+					);
+					console.log(newElements);
+					replaceChildren(panel, newElements)
+				}
+			// });
 		}
 	},
 	groupName

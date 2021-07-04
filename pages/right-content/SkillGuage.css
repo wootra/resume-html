@@ -1,0 +1,24 @@
+.skill-guage {
+    width: calc( 100% - 2rem );
+    position: relative;
+    background-color: rgba(231, 231, 231, 0.253);
+    border-radius: 0.2rem;;
+    margin-bottom: 0.3rem;
+}
+
+.skill-name {
+    max-width: 4rem;
+    text-overflow: ellipsis;
+    display: inline;
+    text-transform: none;
+}
+
+.skill-points {
+    position: absolute;
+    /* left: 6rem; */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 0.8rem;
+    margin-top: -0.1rem;
+}

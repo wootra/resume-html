@@ -7,7 +7,6 @@ export const createElement = (name, attrs = {}, children = []) => {
 			element[attrName] = attrs[attrName];
 		}
 	}
-	
 	if (typeof children === 'string' || !Array.isArray(children)) {
 		children = [children];
 	}

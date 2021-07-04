@@ -20,22 +20,3 @@ export const setLoadEventForCss = (element, cssRelativePath, styleId ) => {
         }
     });
 }
-
-/**
- * 
- * @param {Element} element 
- * @param {string} cssRelativePath path relative to root.
- * @param {string} styleId id that is set in the index.html > link tag.
- */
- export const setLoadEventForCssOnce = (element, cssRelativePath, styleId ) => {
-     console.log("register once - ", {element, cssRelativePath, styleId})
-    registerLoadEventOnce(element, () => {
-        console.log("running once - ", {element, cssRelativePath, styleId})
-        const styleLinkHolder = document.getElementById(styleId);
-        if(!styleLinkHolder){
-            document.head.appendChild(createElement("link", {rel:"stylesheet", id: styleId, href: cssRelativePath}));
-        }else{
-            document.getElementById(styleId).href = cssRelativePath;
-        }
-    });
-}
