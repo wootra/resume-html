@@ -76,7 +76,8 @@ export const LeftContents = Object.freeze({
             'Aero / Defense systems', 
             'SW Engineer', 
             [
-                'C',           'C++',
+                'C/C++',           'MFC',
+                'C#.Net',  
                 'LUA',         'Python',
                 'Socket',      'XML',
                 'OpenGL',      'Python',
