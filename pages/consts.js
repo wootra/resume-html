@@ -7,12 +7,13 @@
  * role: string,
  * industry: string,
  * jobTitle: string,
- * techStacks: [string]
+ * techStacks: [string],
+ * achievements: [string]
  * }} CareerType
  */
 
-const buildCareer = (companyName, url, start, end, role, industry, jobTitle, techStacks) => ({
-    companyName, url, start, end, role, industry, jobTitle, techStacks
+const buildCareer = (companyName, url, start, end, role, industry, jobTitle, techStacks, achievements=[]) => ({
+    companyName, url, start, end, role, industry, jobTitle, techStacks, achievements
 })
 
 /**
@@ -25,16 +26,15 @@ const buildCareer = (companyName, url, start, end, role, industry, jobTitle, tec
 export const LeftContents = Object.freeze({
     Introduction: Object.freeze({
         TITLE: 'Introduction',
-        DESC: `A passionate leader who is eager to solve/mitigate problems.
-        Having fun improving existing software. 
-        BS in Computer Science, 10+ years of full-stack development experiences including RT/multi-thread handling as well as enterprise services/clients.`
+        DESC: `I am good at problem solving and enjoy learning new technology as well as trying fresh approach using the technologies.
+        From the recent experience, I am confident at React hooks, Jest, CSS for front end, and Java, JAX-RS, Mochito for backend.`
     }),
     Careers: Object.freeze({
         TITLE: "Careers",
         CAREERS: [
             buildCareer('USAA', 'http://usaa.com/', 
             [2018,9], null, 
-            'Maintenance and improve of Financial Readiness/Wellness application', 
+            'Maintain & Improve Financial Readiness/Wellness app', 
             'Financial / Insurance', 
             'SW Engineer I', 
             [
@@ -46,21 +46,48 @@ export const LeftContents = Object.freeze({
                 'Mocha',       'Jest',
                 'Mochito',     'Enzyme',
                 'Cypress',     'Spock'
-            ]),
+            ],
+            [
+                "Mordernization of Financial Readiness site",
+                "Improve performance/reliability of the Financial Readiness app"
+            ]
+            ),
             buildCareer('Eonic Korea', 'http://eonic.co.kr/', 
             [2016,7], [2018,3], 
-            'Analysis Signal & UI/UX Design and Developing', 
+            'Signal Analysis, Architecutre, Development', 
             'Sonar / Defense systems', 
             'Lead SW Engineer', 
             [
                 'C',           'C++',
-                'React',       'Redux',
-                'RESTful API', 'Bootstrap',
-                'HTML',        'Python',
-                'MATLAB',      'Intel IPP',
-                'Linux',       'Windows'
-            ]),
-            
+                'RESTful API', 'Javascript',
+                'HTML',        'Labview',
+                'Intel IPP/TBB',   'Linux',
+                'Lab Windows/CVI'
+            ],
+            [
+                "Development of Habor defense system",
+                "Development of sonar system in Jang-bo-go submarine vehicle"
+
+            ]
+            ),
+            buildCareer('Realtimewave', 'http://realtimewave.com/', 
+            [2011,2], [2016,6], 
+            'Develop Test Systems for UAV, Missiles', 
+            'Aero / Defense systems', 
+            'SW Engineer', 
+            [
+                'C',           'C++',
+                'LUA',         'Python',
+                'Socket',      'XML',
+                'OpenGL',      'Python',
+                'MATLAB',      'VxWorks',
+                'Linux',       'QT'
+            ],
+            [
+                "Initiate / Develop TestNgine™ - RT testing tool",
+                "Participate developing RTNgine™ - RT simulator"
+            ]
+            ),
         ]
     })
 });
@@ -159,7 +186,10 @@ export const RightContents = Object.freeze({
             buildSkillLevel("CSS", 5),
             buildSkillLevel("Java", 5),
             buildSkillLevel("C/C++", 5),
+            buildSkillLevel("C#.Net", 5),
             buildSkillLevel("Python", 5),
+            buildSkillLevel("YAML", 5),
+            buildSkillLevel("XML", 5),
             buildSkillLevel("NodeJs", 4),
             buildSkillLevel("LUA", 4),
             buildSkillLevel("JPA", 3),
@@ -189,6 +219,7 @@ export const RightContents = Object.freeze({
             buildSkillLevel("React/Redux", 5),
             buildSkillLevel("Jax-RS", 3),
             buildSkillLevel("Spring Boot", 3),
+            buildSkillLevel("JQuery", 3),
             buildSkillLevel("Angular 6", 2),
         ],
         test: [

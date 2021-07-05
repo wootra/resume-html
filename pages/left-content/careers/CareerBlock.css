@@ -90,3 +90,24 @@
     font-size: 0.7rem;
     color: rgb(122, 122, 122);
 }
+
+ul.career-achievements {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    grid-column: 1/3;
+}
+
+ul.career-achievements > li{
+   list-style: none;
+   font-size: 0.8rem;
+   display: inline-block;
+}
+
+ul.career-achievements > li::before{
+    content: '✅';
+    left: -1rem;
+    right: 100%;
+    top:0;
+    bottom: 0;
+ }

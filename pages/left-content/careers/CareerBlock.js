@@ -39,6 +39,15 @@ const TechStacks = (techs) => createElement('p', {className: 'career-tech-stack'
 
 /**
  * 
+ * @param {[string]} achievements 
+ * @returns {Element}
+ */
+const Achievements = (achievements) => createElement('ul', {className: 'career-achievements', "data-tooltip_after": "achievements"}, 
+	achievements.map(ach=>createElement('li',{},ach))
+);
+
+/**
+ * 
  * @param {{
  * companyName: string,
  * url: string,
@@ -57,6 +66,7 @@ export const CareerBlock = (info) => {
 		Role(info.role),
 		Industry(info.industry),
 		JobTitle(info.jobTitle),
-		TechStacks(info.techStacks)
+		TechStacks(info.techStacks),
+		Achievements(info.achievements)
 	]);
 }
