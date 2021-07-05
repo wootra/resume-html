@@ -1,20 +1,29 @@
 
-.volunteers {
+.educations {
     margin-top: -0.5rem;
 }
 
-ul.volunteer-list {
+ul.education-list, ul.education-degree-list {
     list-style: none;
     margin-top: 0.5rem;
     margin-bottom: 0.1rem;
 }
 
-ul.volunteer-list > li {
+ul.education-list {
+    padding-left: 1rem;
+}
+
+ul.education-degree-list {
+    padding-left: 1.5rem;
+}
+
+
+ul.education-list > li, ul.education-degree-list > li {
     position: relative;
     margin-bottom: 0.5rem;
 }
 
-ul.volunteer-list > li::before {
+ul.education-degree-list > li::before {
     content: "✅";
     font-size: 0.8rem;
     color: #fff;
@@ -25,12 +34,12 @@ ul.volunteer-list > li::before {
     right: calc(100%);
 }
 
-ul.volunteer-list a:link, ul.volunteer-list a:visited, ul.volunteer-list a:active {
+a.education-school:link, a.education-school:visited, a.education-school:active {
     color: var(--right-grid-link);
     transition: color 1s ease;
 }
 
-ul.volunteer-list a:hover {
+a.education-school:hover {
     color: var(--right-grid-link-hover);
     transition: color 1s ease;
     text-decoration: none;

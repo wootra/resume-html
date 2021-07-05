@@ -1,3 +1,10 @@
+/**
+ * 
+ * @param {string} name 
+ * @param {Object.<string,string>} attrs 
+ * @param {[Element|string]|string} children 
+ * @returns {Element}
+ */
 export const createElement = (name, attrs = {}, children = []) => {
 	const element = document.createElement(name);
 	for (const attrName in attrs) {

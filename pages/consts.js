@@ -105,10 +105,50 @@ const buildSkillLevel = (skillName, levelNo) => ({skillName, levelNo});
 const buildVolunteer = (role, where, url) => ({role, where, url});
 
 
+
+/**
+ * @typedef {{name:string, url:string}} SchoolObj
+ */
+
+/**
+ * 
+ * @param {string} name 
+ * @param {string} url
+ * @returns {SchoolObj}
+ */
+ const buildSchool = (name, url) => ({name,url});
+
+
+/**
+ * @typedef {{major:string, degree:string, year:number}} DegreeObj
+ */
+
+/**
+ * 
+ * @param {string} major 
+ * @param {string} degree 
+ * @param {number} year 
+ * @returns {DegreeObj}
+ */
+const buildDegree = (major, degree, year) => ({major, degree, year:year});
+
+/**
+ * @typedef {{school: SchoolObj, degrees: [DegreeObj]}} EducationObj
+ */
+
+/**
+ * 
+ * @param {SchoolObj} school 
+ * @param {[DegreeObj]} degrees 
+ * @returns {EducationObj}
+ */
+const buildEducation = (school, degrees) => ({school, degrees});
+
 /**
  * @type {{
  * skillLevels: Object<string, [SkillObj]>,
- * volunteers: [VolunteerObj]
+ * volunteers: [VolunteerObj],
+ * educations: [EducationObj]
  * }}
  */
 export const RightContents = Object.freeze({
@@ -182,6 +222,15 @@ export const RightContents = Object.freeze({
     volunteers: [
         buildVolunteer("Vice President", "GonAPus ( Amateur Astronomy Club ) in GNU", "https://www.facebook.com/GonApus/"),
         buildVolunteer("Training Helper", "Youth traning center", "http://www.gnyouthtc.or.kr/")
+    ],
+    educations: [
+        buildEducation(
+            buildSchool("Gyeongsang National Univ","https://www.gnu.ac.kr/"), 
+            [
+                buildDegree( "Computer Science", "BC", 2005),
+                buildDegree("Mechanical Engineering", "BE", 2005)
+            ]
+        )
     ]
         
 })

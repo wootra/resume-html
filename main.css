@@ -9,6 +9,8 @@
     --profilePhotoBorderClr: rgb(39, 104, 158);
     --skill-group-back: rgb(0, 68, 88);
     --skill-gauge-back: rgba(187, 187, 187, 0.253);
+    --right-grid-link: rgb(231, 229, 190);
+    --right-grid-link-hover: rgb(0, 238, 255);
 }
 
 @keyframes loading {
