@@ -207,6 +207,7 @@ export const RightContents = Object.freeze({
             buildSkillLevel("XML", 5),
             buildSkillLevel("NodeJs", 4),
             buildSkillLevel("LUA", 4),
+            buildSkillLevel("TypeScript", 3),
             buildSkillLevel("JPA", 3),
             buildSkillLevel("SASS/LESS", 3),
         ],
@@ -238,7 +239,7 @@ export const RightContents = Object.freeze({
             buildSkillLevel("JQuery", 3),
             buildSkillLevel("Angular 6", 2),
         ],
-        test: [
+        "Test Framework": [
             buildSkillLevel("Jest", 5),
             buildSkillLevel("Mocha", 5),
             buildSkillLevel("Enzyme", 5),
@@ -257,6 +258,15 @@ export const RightContents = Object.freeze({
         DevOps: [
             buildSkillLevel("Gialb-ci", 4),
             buildSkillLevel("Docker", 3),
+        ],
+        Documentation: [
+            buildSkillLevel("JsDocs", 5),
+            buildSkillLevel("ReadMe", 3),
+        ],
+        "Project Management": [
+            buildSkillLevel("Agile/Jira", 4),
+            buildSkillLevel("SAFE", 4),
+            buildSkillLevel("SDLC", 3),
         ],
         Network: [
             buildSkillLevel("TCP/IP, UDP", 5),

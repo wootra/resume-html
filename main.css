@@ -11,6 +11,7 @@
     --skill-gauge-back: rgba(187, 187, 187, 0.253);
     --right-grid-link: rgb(197, 228, 241);
     --right-grid-link-hover: rgb(238, 233, 143);
+    --expand-collapse-tool-back: rgb(0, 68, 88);
 }
 
 @keyframes loading {
