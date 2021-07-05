@@ -79,14 +79,37 @@ export const TopContents = Object.freeze({
     }
 })
 
-const buildSkillLevel = (skillName, levelNo) => ({skillName, levelNo})
-
 /**
  * @typedef {{skillName:string, levelNo:number}} SkillObj
  */
 
 /**
- * @type {{skillLevels: Object<string, [SkillObj]>}}
+ * 
+ * @param {string} skillName 
+ * @param {number} levelNo 
+ * @returns {SkillObj}
+ */
+const buildSkillLevel = (skillName, levelNo) => ({skillName, levelNo});
+
+/**
+ * @typedef {{role: string, where: string, url: string}} VolunteerObj
+ */
+
+/**
+ * 
+ * @param {string} role 
+ * @param {string} where 
+ * @param {string} url 
+ * @returns {VolunteerObj}
+ */
+const buildVolunteer = (role, where, url) => ({role, where, url});
+
+
+/**
+ * @type {{
+ * skillLevels: Object<string, [SkillObj]>,
+ * volunteers: [VolunteerObj]
+ * }}
  */
 export const RightContents = Object.freeze({
     skillLevels: {
@@ -155,6 +178,10 @@ export const RightContents = Object.freeze({
             buildSkillLevel("GPS/GNSS", 3),
             buildSkillLevel("I2C", 3),
         ],
-    }
+    },
+    volunteers: [
+        buildVolunteer("Vice President", "GonAPus ( Amateur Astronomy Club ) in GNU", "https://www.facebook.com/GonApus/"),
+        buildVolunteer("Training Helper", "Youth traning center", "http://www.gnyouthtc.or.kr/")
+    ]
         
 })

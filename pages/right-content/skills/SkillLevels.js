@@ -1,7 +1,7 @@
-import Title from '../left-content/Title.js';
-import { createElement, replaceChildren } from '../../tools/elementTools.js';
-import { setLoadEventForCss } from '../../tools/fileTools.js';
-import { RightContents } from '../consts.js';
+import Title from '../../left-content/Title.js';
+import { createElement, replaceChildren } from '../../../tools/elementTools.js';
+import { setLoadEventForCss } from '../../../tools/fileTools.js';
+import { RightContents } from '../../consts.js';
 import SkillGuage from "./SkillGuage.js";
 const skillPanelName = groupName => `skill-panel-for-${groupName}`;
 
@@ -51,6 +51,6 @@ const SkillLevels = createElement(
 	[Title("Skill Levels"), SkillList]
 );
 
-setLoadEventForCss(SkillLevels, './pages/right-content/SkillLevels.css', 'css/SkillLevels');
+setLoadEventForCss(SkillLevels, './pages/right-content/skills/SkillLevels.css', 'css/SkillLevels');
 
 export default SkillLevels;

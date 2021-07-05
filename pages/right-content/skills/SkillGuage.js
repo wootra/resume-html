@@ -1,5 +1,5 @@
-import { createElement } from '../../tools/elementTools.js';
-import { setLoadEventForCss } from '../../tools/fileTools.js';
+import { createElement } from '../../../tools/elementTools.js';
+import { setLoadEventForCss } from '../../../tools/fileTools.js';
 
 const SkillGuage = (skillName, skillPt) => {
 
@@ -17,7 +17,7 @@ const SkillGuage = (skillName, skillPt) => {
 			createElement('div', {className: 'skill-points'}, pointsTxt)
 		]
 	);
-	setLoadEventForCss(skillGuage, './pages/right-content/SkillGuage.css', 'css/SkillGuage');
+	setLoadEventForCss(skillGuage, './pages/right-content/skills/SkillGuage.css', 'css/SkillGuage');
 	return skillGuage;
 }
 
