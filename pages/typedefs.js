@@ -42,5 +42,5 @@
  */
 
 /**
- * @typedef {{name:string, period:string, desc:string}} AchievementObj
+ * @typedef {{name:string, businessValue:string, desc:string}} AchievementObj
  */

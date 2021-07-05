@@ -53,6 +53,6 @@ a:hover.profile-photo-container .profile-photo-bottom {
 }
 
 a:hover.profile-photo-container .meditation-photo {
-	transition: all 0.5s ease;
+	transition: all 1s ease;
     opacity: 1;
 }

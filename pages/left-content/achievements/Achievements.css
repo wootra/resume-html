@@ -1,0 +1,41 @@
+
+.achievements {
+    margin-top: -0.5rem;
+}
+
+.achievements .expand-collapse-tool {
+    background-color: rgb(217, 238, 250);
+    color: black;
+}
+
+.achievement-for-company {
+    margin-top: 0;
+}
+
+.achievement-list {
+
+}
+
+ul.achievement-for-company {
+    padding-left: 1rem;
+}
+
+ul.achievement-for-company > li{
+    list-style: none;
+    font-size: 0.8rem;
+    /* display: inline-block; */
+    position: relative;
+ }
+ 
+ ul.achievement-for-company > li::before{
+     position: absolute;
+     content: '✅';
+     left: -1rem;
+     right: 100%;
+     top:0;
+     bottom: 0;
+  }
+
+.achievement-item {
+    display: inline-block;
+}

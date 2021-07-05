@@ -20,7 +20,7 @@
     top:-1rem;
     bottom: 100%;
     white-space: nowrap;
-    z-index: 1000;
+    z-index: 3000000;
     pointer-events: none;
 }
 
@@ -28,6 +28,12 @@
     left:100%;
     top:0;
     bottom: 0;
+}
+
+[data-tooltip][data-tooltip_pos="bottom"]::before {
+    left:0;
+    top:0;
+    bottom: unset;
 }
   
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -61,10 +67,16 @@
     pointer-events: none;
 }
 
-[data-tooltip_after][data-tooltip_after_pos="right"]::after {
+[data-tooltip_after][data-tooltip_pos="right"]::after {
     left:100%;
     top:0;
     bottom: 0;
+}
+
+[data-tooltip_after][data-tooltip_pos="bottom"]::after {
+    left:0;
+    top:100%;
+    bottom: -100%;
 }
   
 /* Show the tooltip text when you mouse over the tooltip container */

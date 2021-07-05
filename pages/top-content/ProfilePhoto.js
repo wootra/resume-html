@@ -10,14 +10,14 @@ const Profile2 = createImage('profile-photo.png', {
 	className: 'profile-photo-bottom',
 });
 
-const Meditation = createImage('meditation.png', {
+const Meditation = createImage('hidden-picture.png', {
 	className: 'meditation-photo',
 });
 
 const ProfilePhoto = createElement(
 	'a',
 	{ className: 'profile-photo-container' },
-	[Profile1, Meditation, Profile2]
+	[Profile1, Profile2, Meditation]
 );
 
 setLoadEventForCss(ProfilePhoto, './pages/top-content/ProfilePhoto.css', 'css/ProfilePhoto');

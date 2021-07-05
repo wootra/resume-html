@@ -160,10 +160,19 @@ const buildAward = (award, year)=>({award, year})
 /**
  * 
  * @param {string} name 
+ * @param {string} businessValue
  * @param {string} desc 
  * @returns {AchievementObj}
  */
-const buildAchievement = (name, desc) => ({name, desc})
+const buildAchievementItem = (name, businessValue, desc) => ({name, businessValue, desc})
+
+/**
+ * 
+ * @param {string} company 
+ * @param {[AchievementObj]} items 
+ * @returns {{company:string, items:[AchievementObj]}}
+ */
+const buildAchievement = (company, items) => ({company, items})
 
 /**
  * @type {{
@@ -172,7 +181,7 @@ const buildAchievement = (name, desc) => ({name, desc})
  * educations: [EducationObj],
  * awards: [AwardObj],
  * authority: [string],
- * achievements: [{name:string, span:string, desc:string}]
+ * achievements: [{company:string, items:[AchievementObj]}]
  * }}
  */
 export const RightContents = Object.freeze({
@@ -276,15 +285,16 @@ export const RightContents = Object.freeze({
     ],
     authority: ["Green Card"],
     achievements: [
-        { 
-            company: "USAA", 
-            items: [
-                buildAchievement("Upgrade Pipelines to use compliant modules", `
-                    
-                ` )
-            ]
-        }
-        
+        buildAchievement("USAA", [
+            buildAchievementItem("Upgrade Pipelines to use compliant modules", `this is a business value`, "this is a description"),
+            buildAchievementItem("Create EasyUnit", 
+            "save extra time to make unit tests for resource objects",
+            `
+                Resource Objects are used overall server-client model. 
+                lombok covers a lot, but it does not create unit test. 
+                Easyunit create unit test and its vanilla java code.
+            `),
+        ])
     ]
         
 })
