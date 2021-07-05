@@ -232,7 +232,8 @@ export const RightContents = Object.freeze({
         frameworks: [
             buildSkillLevel("React Hooks", 5),
             buildSkillLevel("React/Redux", 5),
-            buildSkillLevel("Jax-RS", 3),
+            buildSkillLevel(".Net", 4),
+            buildSkillLevel("Jax-RS", 4),
             buildSkillLevel("Spring Boot", 3),
             buildSkillLevel("JQuery", 3),
             buildSkillLevel("Angular 6", 2),
