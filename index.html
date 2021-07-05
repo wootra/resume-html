@@ -45,6 +45,18 @@
 				
 			</div>
 		</div>
-		<script src="./main.js" async defer type="module"></script>
+		<script id="main-script" async defer type="module"></script>
+		<script type="text/javascript">
+			//script loader.
+			window.addEventListener("load", ()=>{
+				var mainScript = document.getElementById("main-script");
+				var existingSrc = mainScript.src;
+				if(!existingSrc){
+					mainScript.src = "./main.js?version=" + (Math.random()*100000);
+				}
+			})
+		</script>
+		
+		<!-- <script src="./main.js" async defer type="module"></script> -->
 	</body>
 </html>

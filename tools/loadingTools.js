@@ -99,7 +99,5 @@ export const startMonitoring = (initPageCallback)=>{
         }
     })
 
-    window.addEventListener('load', ()=>{
-        initPageCallback();
-    });
+    initPageCallback();
 }
