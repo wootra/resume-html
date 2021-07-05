@@ -16,6 +16,7 @@ export const setLoadEventForCss = (element, cssRelativePath, styleId ) => {
             let existingHref = document.getElementById(styleId).href;
             existingHref = existingHref.replace(/https?:\/\/[a-z.:0-9]+\//,"");
             if(existingHref !== cssRelativePath.replace("./","")) {
+                console.log({existingHref, cssRelativePath})
                 //prevent same css is loaded occuring re-render of DOM
                 document.getElementById(styleId).href = cssRelativePath;
             }
