@@ -173,10 +173,24 @@ const buildDegree = (major, degree, year) => ({major, degree, year:year});
 const buildEducation = (school, degrees) => ({school, degrees});
 
 /**
+ * @typedef {{award:string, year:number}} AwardObj
+ */
+
+/**
+ * 
+ * @param {string} award 
+ * @param {number} year 
+ * @returns {AwardObj}
+ */
+const buildAward = (award, year)=>({award, year})
+
+/**
  * @type {{
  * skillLevels: Object<string, [SkillObj]>,
  * volunteers: [VolunteerObj],
- * educations: [EducationObj]
+ * educations: [EducationObj],
+ * awards: [AwardObj],
+ * authority: [string]
  * }}
  */
 export const RightContents = Object.freeze({
@@ -263,6 +277,10 @@ export const RightContents = Object.freeze({
                 buildDegree("Mechanical Engineering", "BE", 2005)
             ]
         )
-    ]
+    ],
+    awards: [
+        buildAward("3D-Scanner using 3-color layers", 2004)
+    ],
+    authority: ["Green Card"]
         
 })
