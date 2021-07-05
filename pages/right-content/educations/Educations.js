@@ -39,7 +39,7 @@ const Educations = createElement(
 	{ 
 		className: 'educations',
 	},
-	[Title("Educations"), EducationList]
+	[Title("Educations "), EducationList]
 );
 
 setLoadEventForCss(Educations, './pages/right-content/educations/Educations.css', 'css/Educations');
