@@ -286,7 +286,7 @@ export const RightContents = Object.freeze({
     authority: ["Green Card"],
     achievements: [
         buildAchievement("USAA", [
-            buildAchievementItem("Upgrade Pipelines to use compliant modules", `this is a business value`, "this is a description"),
+            buildAchievementItem("Upgrade Pipelines to use compliant modules", `meet compliant policy, improve reliability`, "implement x-ray, sonarqube, move repository to the managed repository"),
             buildAchievementItem("Create EasyUnit", 
             "save extra time to make unit tests for resource objects",
             `
