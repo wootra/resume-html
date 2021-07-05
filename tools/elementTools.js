@@ -46,7 +46,6 @@ export const createImage = (src, attrs={}) => {
 const isDisplayNone = element => {
 	if(element.tagName === 'BODY') return false;
 	const computedStyle = window.getComputedStyle(element);
-	console.log("isDisplayNone:", element.tagName, element.className, computedStyle.display)
 	if(computedStyle.display === 'none') return true;
 	else return isDisplayNone(element.parentNode);
 }
@@ -63,7 +62,6 @@ const getOnlyVisibleElements = elements => {
 	for(let n=0; n<elements.length; n++){
 		!isDisplayNone(elements[n]) && childrenToRet.push(elements[n]);
 	}
-	console.log(elements, elements[0], childrenToRet);
 	return childrenToRet;
 }
 
@@ -73,7 +71,6 @@ const getOnlyVisibleElements = elements => {
  */
 export const getElementBySelector = (selector, includingHidden=false) => {
 	const ret = document.querySelectorAll(selector);
-	console.log("getElementBySelector - ", selector, ret)
 	return ret && includingHidden ? ret : getOnlyVisibleElements(ret);
 }
 

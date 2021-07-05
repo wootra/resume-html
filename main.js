@@ -9,5 +9,4 @@ setLoadEventForCss(root, './tools/expandCollapseTool.css', 'css/ExpandCollapse')
 
 startMonitoring(()=>{
 	replaceChildren(root, mainPage);
-	console.log('loaded');
 });

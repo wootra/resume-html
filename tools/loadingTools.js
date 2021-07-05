@@ -25,7 +25,6 @@ const getUniqInfo = element => {
     if(element.id) return "#"+element.id;
     if(element.className) {
         const classSelector = "."+element.className.replace(/[ ]{2,}/g, " ").split(" ").join(".");
-        console.log({classSelector});
         return classSelector;
     }
 }
@@ -47,34 +46,12 @@ export const registerLoadEvent = (element, onLoadCallback )=>{
     ).length === 0  && loadingQueue.value[selector].push(onLoadCallback);
 }
 
-/**
- * register the callback for onLoadCallback
- * @param {Element} element 
- * @param {function(Element)} onLoadCallback 
- */
- export const registerLoadEventOnce = (element, onLoadCallback )=>{
-    registerLoadEvent(element, onLoadCallback);
-    // const selector = getUniqInfo(element);
-    // if(!loadingQueueOnce.value[selector]){
-    //     loadingQueueOnce.value[selector] = []; //create a list.
-    // }
-    
-    // //when no same callback existing in the array, add one.
-    // loadingQueueOnce.value[selector].filter(
-    //     callback=>callback === onLoadCallback
-    // ).length === 0  && loadingQueueOnce.value[selector].push(onLoadCallback);
-
-    // console.log("registered for once --->", loadingQueueOnce);
-}
-
-
 var __widthChangeHandlerId = -1;
 var __savedInnerWidth = -1;
 
 let __monitoringStarted = false;
 
 const mutationCallback = (mutationsList, observer)=>{
-    mutationsList ? console.log("mutated", mutationsList) : console.log("size-changed");
     const loadingQueueValue = loadingQueue.value;
     for(const selector in loadingQueueValue){
         // const selector = getUniqInfo(element);
@@ -83,7 +60,6 @@ const mutationCallback = (mutationsList, observer)=>{
         const elements = getElementBySelector(selector);
         
         if(elements.length > 0){
-            console.log("running event handler for ", selector)
             loadingQueueValue[selector].forEach(evHandler=>{
                 evHandler(elements)
             });
@@ -98,7 +74,6 @@ const mutationCallback = (mutationsList, observer)=>{
         }
         loadingQueue.value = newObj;
     }
-    console.log("loading-queue", loadingQueue.value)
 };
 
 var __windowMutationObserver = new MutationObserver(mutationCallback);
@@ -125,8 +100,6 @@ export const startMonitoring = (initPageCallback)=>{
     })
 
     window.addEventListener('load', ()=>{
-        console.log("document is ready")
-
         initPageCallback();
     });
 }
