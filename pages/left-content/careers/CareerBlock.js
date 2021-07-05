@@ -48,16 +48,7 @@ const Achievements = (achievements) => createElement('ul', {className: 'career-a
 
 /**
  * 
- * @param {{
- * companyName: string,
- * url: string,
- * start: YearMonth,
- * end: YearMonth,
- * role: string,
- * industry: string,
- * jobTitle: string,
- * techStacks: [string]
- * }} info 
+ * @param {CareerType} info 
  */
 export const CareerBlock = (info) => {
 	return createElement('div', {className: 'career-block'}, [

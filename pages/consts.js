@@ -1,28 +1,28 @@
-/**
- * @typedef {{
- * companyName: string,
- * url: string,
- * start: YearMonth,
- * end: YearMonth,
- * role: string,
- * industry: string,
- * jobTitle: string,
- * techStacks: [string],
- * achievements: [string]
- * }} CareerType
- */
 
+/**
+ * 
+ * @param {string} companyName 
+ * @param {string} url 
+ * @param {YearMonth} start 
+ * @param {YearMonth} end 
+ * @param {string} role 
+ * @param {string} industry 
+ * @param {string} jobTitle 
+ * @param {[string]} techStacks 
+ * @param {[string]} achievements 
+ * @returns {CareerType}
+ */
 const buildCareer = (companyName, url, start, end, role, industry, jobTitle, techStacks, achievements=[]) => ({
     companyName, url, start, end, role, industry, jobTitle, techStacks, achievements
 })
 
 /**
+ * LeftContents
  * @type {{
  *  Introduction: {TITLE:string, DESC:string},
  *  Careers: {TITLE:string, CAREERS:[CareerType] } 
  * }}
  */
-
 export const LeftContents = Object.freeze({
     Introduction: Object.freeze({
         TITLE: 'Introduction',
@@ -108,20 +108,12 @@ export const TopContents = Object.freeze({
 })
 
 /**
- * @typedef {{skillName:string, levelNo:number}} SkillObj
- */
-
-/**
  * 
  * @param {string} skillName 
  * @param {number} levelNo 
  * @returns {SkillObj}
  */
 const buildSkillLevel = (skillName, levelNo) => ({skillName, levelNo});
-
-/**
- * @typedef {{role: string, where: string, url: string}} VolunteerObj
- */
 
 /**
  * 
@@ -132,12 +124,6 @@ const buildSkillLevel = (skillName, levelNo) => ({skillName, levelNo});
  */
 const buildVolunteer = (role, where, url) => ({role, where, url});
 
-
-
-/**
- * @typedef {{name:string, url:string}} SchoolObj
- */
-
 /**
  * 
  * @param {string} name 
@@ -145,11 +131,6 @@ const buildVolunteer = (role, where, url) => ({role, where, url});
  * @returns {SchoolObj}
  */
  const buildSchool = (name, url) => ({name,url});
-
-
-/**
- * @typedef {{major:string, degree:string, year:number}} DegreeObj
- */
 
 /**
  * 
@@ -161,20 +142,12 @@ const buildVolunteer = (role, where, url) => ({role, where, url});
 const buildDegree = (major, degree, year) => ({major, degree, year:year});
 
 /**
- * @typedef {{school: SchoolObj, degrees: [DegreeObj]}} EducationObj
- */
-
-/**
  * 
  * @param {SchoolObj} school 
  * @param {[DegreeObj]} degrees 
  * @returns {EducationObj}
  */
 const buildEducation = (school, degrees) => ({school, degrees});
-
-/**
- * @typedef {{award:string, year:number}} AwardObj
- */
 
 /**
  * 
@@ -185,12 +158,21 @@ const buildEducation = (school, degrees) => ({school, degrees});
 const buildAward = (award, year)=>({award, year})
 
 /**
+ * 
+ * @param {string} name 
+ * @param {string} desc 
+ * @returns {AchievementObj}
+ */
+const buildAchievement = (name, desc) => ({name, desc})
+
+/**
  * @type {{
  * skillLevels: Object<string, [SkillObj]>,
  * volunteers: [VolunteerObj],
  * educations: [EducationObj],
  * awards: [AwardObj],
- * authority: [string]
+ * authority: [string],
+ * achievements: [{name:string, span:string, desc:string}]
  * }}
  */
 export const RightContents = Object.freeze({
@@ -292,6 +274,17 @@ export const RightContents = Object.freeze({
     awards: [
         buildAward("3D-Scanner using 3-color layers", 2004)
     ],
-    authority: ["Green Card"]
+    authority: ["Green Card"],
+    achievements: [
+        { 
+            company: "USAA", 
+            items: [
+                buildAchievement("Upgrade Pipelines to use compliant modules", `
+                    
+                ` )
+            ]
+        }
+        
+    ]
         
 })
