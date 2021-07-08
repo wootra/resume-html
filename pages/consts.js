@@ -45,11 +45,13 @@ export const LeftContents = Object.freeze({
                 'Openshift',   'gitlab-ci',
                 'Mocha',       'Jest',
                 'Mochito',     'Enzyme',
-                'Cypress',     'Spock'
+                'Cypress',     'Spock',
+                "Kafka"
             ],
             [
-                "Mordernization of Financial Readiness site",
-                "Improve performance/reliability of the Financial Readiness app"
+                "Mordernization of Financial Readiness site (Talon/New Web)",
+                "Improve performance/reliability of the Financial Readiness app",
+                "Involved to overall applications except for batch process"
             ]
             ),
             buildCareer('Eonic Korea', 'http://eonic.co.kr/', 
@@ -62,12 +64,13 @@ export const LeftContents = Object.freeze({
                 'RESTful API', 'Javascript',
                 'HTML',        'Labview',
                 'Intel IPP/TBB',   'Linux',
-                'Lab Windows/CVI'
+                'Lab Windows/CVI', "GIT/SNS"
             ],
             [
                 "Development of Habor defense system",
-                "Development of sonar system in Jang-bo-go submarine vehicle"
-
+                "Development of sonar system in Jang-bo-go submarine vehicle",
+                "Lead the software team",
+                "Design architecture, analyze sonar signal, working as POC of all sonar applications"
             ]
             ),
             buildCareer('Realtimewave', 'http://realtimewave.com/', 
@@ -76,17 +79,18 @@ export const LeftContents = Object.freeze({
             'Aero / Defense systems', 
             'SW Engineer', 
             [
-                'C/C++',           'MFC',
-                'C#.Net',  
+                'C/C++',       'MFC',
+                'C#.Net',      "RT/Java",
                 'LUA',         'Python',
                 'Socket',      'XML',
                 'OpenGL',      'Python',
                 'MATLAB',      'VxWorks',
-                'Linux',       'QT'
+                'Linux',       'QT', 
             ],
             [
                 "Initiate / Develop TestNgine™ - RT testing tool",
-                "Participate developing RTNgine™ - RT simulator"
+                "Participate developing RTNgine™ - RT simulator",
+                "Network programming, build servers/clients"
             ]
             ),
         ]
@@ -197,7 +201,7 @@ export const RightContents = Object.freeze({
             buildSkillLevel("YAML", 5),
             buildSkillLevel("XML", 5),
             buildSkillLevel("NodeJs", 4),
-            buildSkillLevel("LUA", 4),
+            buildSkillLevel("LUA", 3),
             buildSkillLevel("TypeScript", 3),
             buildSkillLevel("JPA", 3),
             buildSkillLevel("SASS/LESS", 3),
@@ -229,15 +233,16 @@ export const RightContents = Object.freeze({
             buildSkillLevel("Spring Boot", 3),
             buildSkillLevel("JQuery", 3),
             buildSkillLevel("Angular 6", 2),
+            buildSkillLevel("Kafka", 2),
         ],
         "Test Framework": [
             buildSkillLevel("Jest", 5),
             buildSkillLevel("Mocha", 5),
             buildSkillLevel("Enzyme", 5),
             buildSkillLevel("sinon", 5),
-            buildSkillLevel("sinon", 5),
-            buildSkillLevel("Selenium", 4),
+            buildSkillLevel("Mochito", 5),
             buildSkillLevel("cypress", 5),
+            buildSkillLevel("Selenium", 4),
             buildSkillLevel("Spock", 3),
         ],
         database: [
@@ -249,6 +254,7 @@ export const RightContents = Object.freeze({
         DevOps: [
             buildSkillLevel("Gialb-ci", 4),
             buildSkillLevel("Docker", 3),
+            buildSkillLevel("Openshift", 3),
         ],
         Documentation: [
             buildSkillLevel("JsDocs", 5),
