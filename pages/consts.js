@@ -166,10 +166,11 @@ const buildAward = (award, year)=>({award, year})
  * 
  * @param {string} name 
  * @param {string} businessValue
+ * @param {string} myPart
  * @param {string} desc 
  * @returns {AchievementObj}
  */
-const buildAchievementItem = (name, businessValue, desc) => ({name, businessValue, desc})
+const buildAchievementItem = (name, businessValue, myPart, desc) => ({name, businessValue, myPart, desc})
 
 /**
  * 
@@ -293,9 +294,26 @@ export const RightContents = Object.freeze({
     authority: ["Green Card"],
     achievements: [
         buildAchievement("USAA", [
-            buildAchievementItem("Upgrade Pipelines to use compliant modules (Gitlab-ci)", `meet compliant policy, improve reliability`, "implement x-ray, sonarqube, move repository to the managed repository"),
+            buildAchievementItem("Mordernization of Financial Readiness site (Talon/New Web)", 
+                `improve performance, reliability and maintainability`, 
+                "worked as a team member on RESTful API and database",
+                "The legacy FRS(Financial Readiness Score) tool was built with Wicket, so we converted it using modern technology such as React/Jax-RS."),
+            buildAchievementItem("Trust the member(Emergency Fund) (Talon/New Web)", 
+                `Improve member's experience, give member ability to add their own EF values, show visual information about where the member is in the savings journey`, 
+                `Create service architecture, design DB, Write Flow Diagrams, Add visual sign on the card, Introduce TDD concept, add scenario system to handle the complex card transition, add flip card effect`,
+                ""),
+            buildAchievementItem("Trust the member(Debt and Spending) (Talon/New Web)", 
+                `Improve member's experience, give member more specialized guideline adding more steps, show visual information about where the member is in the debt spending journey`, 
+                `co-lead the team with the team lead, code review and debug, add horseshoe chart, lead the team, technical consult to the offshore teams, code reviews and debug`,
+                ""),
+            
+            buildAchievementItem("Upgrade Pipelines to use compliant modules (Gitlab-ci)",
+             `meet compliant policy, improve reliability`, 
+             "implement x-ray, sonarqube, move repository to the managed repository",
+             ""),
             buildAchievementItem("Create EasyUnit (Java/Mochito)", 
             "save extra time to make unit tests for resource objects",
+            "created easy-unit, introduce it to the team",
             `
                 Resource Objects are used overall server-client model. 
                 lombok covers a lot, but it does not create unit test. 
@@ -303,6 +321,7 @@ export const RightContents = Object.freeze({
             `),
             buildAchievementItem("OpenL validation tool(Excel/Javascript)", 
             "reduce human error when converting ActivityList from ERDC table(web) to OpenL(excel) by creating validation process",
+            "created the validation tool, use it to validate the new file",
             `
             When converting activity list to openl, it was enumours amount of data and multiple people worked on it. 
             We didn't have a way to validate them so I have created parsers using excel and confirmed if the converted tables are equivalent to the original formula.
@@ -326,7 +345,8 @@ export const RightContents = Object.freeze({
             `),
         ]),
         buildAchievement("GNU", [
-            buildAchievementItem("White board(Java/applet)", `small chatting application with drawing ability(pair programming)`, "Instead of boring chatting, I gave the "),
+            buildAchievementItem("White board(Java/applet)", `small chatting application with drawing ability(pair programming)`, 
+            "Instead of boring chatting, I gave the "),
             
         ]),
         

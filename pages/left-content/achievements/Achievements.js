@@ -4,7 +4,7 @@ import { setLoadEventForCss } from '../../../tools/fileTools.js';
 import { RightContents } from '../../contentLoader.js';
 import ExpandCollapseTool from '../../../tools/expandCollapseTool.js';
 
-const AchievementItem = ({name, desc, businessValue})=>createElement('div', 
+const AchievementItem = ({name, desc, myPart, businessValue})=>createElement('div', 
 	{
 		className: 'achievement-item', 
 		"data-desc": desc
@@ -19,8 +19,12 @@ const AchievementItem = ({name, desc, businessValue})=>createElement('div',
 			"data-tooltip": "Business Value",
 		}, businessValue),
 		createElement('div', {
+			className: "achievement-my-part",
+			"data-tooltip": "I worked on:",
+		}, myPart),
+		createElement('div', {
 			className: "achievement-desc",
-			"data-tooltip": "Description",
+			"data-tooltip": "more description",
 		}, desc),
 	]
 )

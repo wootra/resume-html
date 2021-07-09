@@ -8,6 +8,10 @@
     color: black;
 }
 
+.achievements .expand-collapse-tool:not(.shrunk) .expand-collapse-tool-panel {
+    max-height: unset;
+}
+
 .achievement-for-company {
     margin-top: 0;
 }
@@ -18,6 +22,10 @@
 
 .achievement-name {
     font-weight: bold;
+}
+
+.achievement-my-part {
+    color:rgb(117, 0, 0);
 }
 
 .achievement-desc {
