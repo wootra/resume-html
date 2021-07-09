@@ -302,8 +302,8 @@ export const RightContents = Object.freeze({
             I have consulted and made sure the new service follow micro-service concept and would make calls effectively between services.
             `),
             buildAchievementItem("Trust the member(Debt and Spending) (Talon/New Web)", 
-            `Improve member's experience, give member more specialized guideline adding more steps, show visual information about where the member is in the debt spending journey (Jax-RS/React/OpenL/Spring/NodeJs/DB2)`, 
-            `co-lead the team with the team lead, code review and debug, add horseshoe chart, lead the team, technical consult to the offshore teams, code reviews and debug`,
+            `Improve member's experience, give member more specialized guideline adding more steps, show visual information about where the member is in the debt spending journey `, 
+            `co-lead the team with the team lead, code review and debug, add horseshoe chart, lead the team, technical consult to the offshore teams, code reviews and debug(Jax-RS/React/OpenL/Spring/NodeJs/DB2)`,
             ""),
             buildAchievementItem("Trust the member(Emergency Fund) (Talon/New Web)", 
             `Improve member's experience, give member ability to add their own EF values, show visual information about where the member is in the savings journey`, 
@@ -313,9 +313,9 @@ export const RightContents = Object.freeze({
              `meet compliant policy, improve reliability`, 
              "implement x-ray, sonarqube, move repository to the managed repository(Gitlab-ci/bash/YAML)",
              ""),
-             buildAchievementItem("Improve performance/reliability of the Financial Readiness app (Java/Jax-RS)",
+             buildAchievementItem("Improve performance/reliability of the Financial Readiness app",
              `meet compliant policy, improve reliability`, 
-             "Found multiple possible sytem errors and fixed such as failure occured by timing issues and version mismatch of network cache and jackson",
+             "Found multiple possible sytem errors and fixed such as failure occured by timing issues and version mismatch of network cache and jackson (Java/gradle/Jax-RS)",
              "I have reviewed the source code occationally and found possible bugs. Also, I have participated to fix the errors found by other testers"),
             buildAchievementItem("Create EasyUnit", 
             "save extra time to make unit tests for resource objects",
@@ -342,12 +342,18 @@ export const RightContents = Object.freeze({
             buildAchievementItem("Create Circuit boards Test Solution", 
                 `Reduce the time to create similar tests`,
                  "creator of the software(Lab Windows/CVI, C/C++)"),
+            buildAchievementItem("Harbor defense system", 
+                `Create Korean first active sonar with LIG Nex1`,
+                "Analyze the sonar data to detect multiple objects, create a UI to visualize the objects (Labview, FFT, Lab Windows, C/C++)"),
+            buildAchievementItem("Passive sonar sytem for Submarine", 
+                `Create passive sonar and store the sonar data with LIG Nex1`,
+                "Develop high performing storage system"),
             buildAchievementItem("Sonar signal monitoring system", 
                  `handle high load data`,
-                  "creator of the software(Lab Windows/CVI, C/C++)"),
+                  "design the architecture, lead the sw team(Java/Javascript/C/C++/Intel IPP)"),
+                  "To achieve the performance requirement, I have create an architecture of multiple platforms/languages"
         ]),
         buildAchievement("Realtimewave", [
-           
             buildAchievementItem("Create TestNgine", 
                 "Being sold as Company's new product",
                 "creator of the software, created UI and participate on the service in the Realtime-OS.",
@@ -368,6 +374,11 @@ export const RightContents = Object.freeze({
                 "developer of the network system(C/bash)", 
                 ""
             ),
+            buildAchievementItem("Research", 
+                `Research of RT-Java, GPS/GNSS monitoring, encoding intra-red video`, 
+                "research of various area to evaluate the technical enability", 
+                "perform as a researcher"
+            ),
         ]),
         buildAchievement("Personal Projects", [
             buildAchievementItem("Diagnositics of Parkinson's Desease", 
@@ -378,9 +389,9 @@ export const RightContents = Object.freeze({
             I received the results of blood analysis and proceed learning 3 levels of DNN after pre-processing.
             the input node was 56, and output was 1 with percentage. after post processing, I could get meaningful result which find new patient as 90% accuracy.
             `),
-            buildAchievementItem("Horseshoe(javascript/SVG)",
+            buildAchievementItem("Horseshoe",
                 "small size SVG based chart software with no external dependencies (Opensource)",
-                "personal project",
+                "personal project(javascript/SVG)",
                 "used for FRS debt and spending card"
             ),
             buildAchievementItem("Multi-domain redux", 
