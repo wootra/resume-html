@@ -293,15 +293,44 @@ export const RightContents = Object.freeze({
     authority: ["Green Card"],
     achievements: [
         buildAchievement("USAA", [
-            buildAchievementItem("Upgrade Pipelines to use compliant modules", `meet compliant policy, improve reliability`, "implement x-ray, sonarqube, move repository to the managed repository"),
-            buildAchievementItem("Create EasyUnit", 
+            buildAchievementItem("Upgrade Pipelines to use compliant modules (Gitlab-ci)", `meet compliant policy, improve reliability`, "implement x-ray, sonarqube, move repository to the managed repository"),
+            buildAchievementItem("Create EasyUnit (Java/Mochito)", 
             "save extra time to make unit tests for resource objects",
             `
                 Resource Objects are used overall server-client model. 
                 lombok covers a lot, but it does not create unit test. 
                 Easyunit create unit test and its vanilla java code.
             `),
-        ])
+            buildAchievementItem("OpenL validation tool(Excel/Javascript)", 
+            "reduce human error when converting ActivityList from ERDC table(web) to OpenL(excel) by creating validation process",
+            `
+            When converting activity list to openl, it was enumours amount of data and multiple people worked on it. 
+            We didn't have a way to validate them so I have created parsers using excel and confirmed if the converted tables are equivalent to the original formula.
+            `),
+        ]),
+        
+        buildAchievement("Eonic Korea", [
+            buildAchievementItem("Create Circuit boards Test Solution", `Reduce the time to create similar tests`, ""),
+        ]),
+        buildAchievement("Realtimewave", [
+            buildAchievementItem("Create NetConnector", `boost working efficiency at least 300%`, "replace most of integration test with hardware with software test using NetConnector"),
+            buildAchievementItem("Create TestNgine", 
+            "Being sold as Company's new product",
+            `TestNetConnector is evolved to the product version`),
+        ]),
+        buildAchievement("Personal Projects", [
+            buildAchievementItem("Diagnositics of Parkinson's Desease(TensorFlow/Keras/Deep Learning)", `Found new patient with 90% of accuracy`, `
+            It was request from a Doctor(Yongsuk-Yang) in Korea and he wanted to know if Diagnositics using Deep Learning for the Parkinson's Desease using Blood analysis.
+            I received the results of blood analysis and proceed learning 3 levels of DNN after pre-processing.
+            the input node was 56, and output was 1 with percentage. after post processing, I could get meaningful result which find new patient as 90% accuracy.
+            `),
+        ]),
+        buildAchievement("GNU", [
+            buildAchievementItem("White board(Java/applet)", `small chatting application with drawing ability(pair programming)`, "Instead of boring chatting, I gave the "),
+            
+        ]),
+        
+        
     ]
         
 })

@@ -16,6 +16,24 @@
 
 }
 
+.achievement-name {
+    font-weight: bold;
+}
+
+.achievement-desc {
+    color:rgb(92, 92, 92);
+}
+
+.achievement-business-value {
+    color:rgb(37, 112, 161);
+}
+
+.achievement-desc::before {
+    content: '- ';
+}
+
+
+
 ul.achievement-for-company {
     padding-left: 1rem;
 }
