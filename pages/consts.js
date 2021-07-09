@@ -296,38 +296,38 @@ export const RightContents = Object.freeze({
         buildAchievement("USAA", [
             buildAchievementItem("Predicted Card Experience (Talon/New Web)", 
             `show members predicted profiles instead of making members to start over for all the questionnaire to start to use Financial Wellness Tool`, 
-            `involved to the architecture design for the services and gave insights as a developer of existing services, created and lead UI development from the base to the top using React Hooks/ Router/ Reducer`,
+            `involved to the architecture design for the services and gave insights as a developer of existing services, update member home code and unit/functional tests, created and lead UI development from the base to the top using React Hooks/ Router/ Reducer  (Jax-RS/React/OpenL/Spring/NodeJs/DB2)`,
             `I have merged existing FRS questionnaire application and dashboard application and created a new router structure to make them compatible to each other. 
             Also, wrote multiple scripts to make the pipelines to leave proper evidence from the new projects. 
             I have consulted and made sure the new service follow micro-service concept and would make calls effectively between services.
             `),
             buildAchievementItem("Trust the member(Debt and Spending) (Talon/New Web)", 
-            `Improve member's experience, give member more specialized guideline adding more steps, show visual information about where the member is in the debt spending journey`, 
+            `Improve member's experience, give member more specialized guideline adding more steps, show visual information about where the member is in the debt spending journey (Jax-RS/React/OpenL/Spring/NodeJs/DB2)`, 
             `co-lead the team with the team lead, code review and debug, add horseshoe chart, lead the team, technical consult to the offshore teams, code reviews and debug`,
             ""),
             buildAchievementItem("Trust the member(Emergency Fund) (Talon/New Web)", 
             `Improve member's experience, give member ability to add their own EF values, show visual information about where the member is in the savings journey`, 
-            `Create service architecture, design DB, Write Flow Diagrams, Add visual sign on the card, Introduce TDD concept, add scenario system to handle the complex card transition, add flip card effect`,
+            `Create service architecture, design DB, Write Flow Diagrams, Add visual sign on the card, Introduce TDD concept, add scenario system to handle the complex card transition, add flip card effect (Jax-RS/React/OpenL/Spring/NodeJs/DB2)`,
             ""),
-            buildAchievementItem("Upgrade Pipelines to use compliant modules (Gitlab-ci)",
+            buildAchievementItem("Upgrade Pipelines to use compliant modules ",
              `meet compliant policy, improve reliability`, 
-             "implement x-ray, sonarqube, move repository to the managed repository",
+             "implement x-ray, sonarqube, move repository to the managed repository(Gitlab-ci/bash/YAML)",
              ""),
              buildAchievementItem("Improve performance/reliability of the Financial Readiness app (Java/Jax-RS)",
              `meet compliant policy, improve reliability`, 
              "Found multiple possible sytem errors and fixed such as failure occured by timing issues and version mismatch of network cache and jackson",
              "I have reviewed the source code occationally and found possible bugs. Also, I have participated to fix the errors found by other testers"),
-            buildAchievementItem("Create EasyUnit (Java/Mochito)", 
+            buildAchievementItem("Create EasyUnit", 
             "save extra time to make unit tests for resource objects",
-            "created easy-unit, introduce it to the team",
+            "created easy-unit, introduce it to the team(Java/Mochito)",
             `
                 Resource Objects are used overall server-client model. 
                 lombok covers a lot, but it does not create unit test. 
                 Easyunit create unit test and its vanilla java code.
             `),
-            buildAchievementItem("OpenL validation tool(Excel/Javascript)", 
+            buildAchievementItem("OpenL validation tool", 
             "reduce human error when converting ActivityList from ERDC table(web) to OpenL(excel) by creating validation process",
-            "created the validation tool, use it to validate the new file",
+            "created the validation tool, use it to validate the new file(Excel/Javascript)",
             `
             When converting activity list to openl, it was enumours amount of data and multiple people worked on it. 
             We didn't have a way to validate them so I have created parsers using excel and confirmed if the converted tables are equivalent to the original formula.
@@ -339,25 +339,70 @@ export const RightContents = Object.freeze({
         ]),
         
         buildAchievement("Eonic Korea", [
-            buildAchievementItem("Create Circuit boards Test Solution", `Reduce the time to create similar tests`, ""),
+            buildAchievementItem("Create Circuit boards Test Solution", 
+                `Reduce the time to create similar tests`,
+                 "creator of the software(Lab Windows/CVI, C/C++)"),
+            buildAchievementItem("Sonar signal monitoring system", 
+                 `handle high load data`,
+                  "creator of the software(Lab Windows/CVI, C/C++)"),
         ]),
         buildAchievement("Realtimewave", [
-            buildAchievementItem("Create NetConnector", `boost working efficiency at least 300%`, "replace most of integration test with hardware with software test using NetConnector"),
+           
             buildAchievementItem("Create TestNgine", 
-            "Being sold as Company's new product",
-            `TestNetConnector is evolved to the product version`),
+                "Being sold as Company's new product",
+                "creator of the software, created UI and participate on the service in the Realtime-OS.",
+                `TestNetConnector is evolved to the product version`
+            ),
+            buildAchievementItem("Create NetConnector", 
+                `boost working efficiency at least 300%`, 
+                "creator of the software(C#/C/Python)", 
+                "replace most of integration test with hardware with software test using NetConnector"
+            ),
+            buildAchievementItem("Panel builder", 
+                `give abilities to create a custom UI having multiple panels and network connections`, 
+                "creator of the software(C++/LUA)", 
+                ""
+            ),
+            buildAchievementItem("Warning system in the nuclear power plant", 
+                `built a reliable warning system overall nuclear power plants`, 
+                "developer of the network system(C/bash)", 
+                ""
+            ),
         ]),
         buildAchievement("Personal Projects", [
-            buildAchievementItem("Diagnositics of Parkinson's Desease(TensorFlow/Keras/Deep Learning)", `Found new patient with 90% of accuracy`, `
+            buildAchievementItem("Diagnositics of Parkinson's Desease", 
+            `Found new patient with 90% of accuracy`, 
+            "personal contract(Python/TensorFlow/Keras/Jupiter Notebook/Deep Learning)", 
+            `
             It was request from a Doctor(Yongsuk-Yang) in Korea and he wanted to know if Diagnositics using Deep Learning for the Parkinson's Desease using Blood analysis.
             I received the results of blood analysis and proceed learning 3 levels of DNN after pre-processing.
             the input node was 56, and output was 1 with percentage. after post processing, I could get meaningful result which find new patient as 90% accuracy.
             `),
+            buildAchievementItem("Horseshoe(javascript/SVG)",
+                "small size SVG based chart software with no external dependencies (Opensource)",
+                "personal project",
+                "used for FRS debt and spending card"
+            ),
+            buildAchievementItem("Multi-domain redux", 
+                "enable users to use multi-domain of reducer",
+                "personal project",
+                "it was before react hook comes out when I develop this. Now it can be replaced with React hooks reducer/context"
+            ),
+            
         ]),
         buildAchievement("GNU", [
-            buildAchievementItem("White board(Java/applet)", `small chatting application with drawing ability(pair programming)`, 
-            "Instead of boring chatting, I gave the "),
-            
+            buildAchievementItem("White board", 
+                `small chatting application with drawing ability`, 
+                "pair programming",
+                "Instead of boring chatting, I gave the drawing functionality adding a fun factor."),
+            buildAchievementItem("Circuit simulator", 
+                `give an ability to draw/simulate circuit design`, 
+                "pair programming(Java/applet)",
+                "add AND/OR/XOR/NOT block in the board and give any signal by user to simulate the behavior of the circuit"),
+            buildAchievementItem("3D scanner", 
+                `create a 3D image based on 2 pictures.`, 
+                "graduation paper project, perform as the sw programmer",
+                ""),
         ]),
         
         
