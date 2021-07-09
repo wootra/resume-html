@@ -294,23 +294,29 @@ export const RightContents = Object.freeze({
     authority: ["Green Card"],
     achievements: [
         buildAchievement("USAA", [
-            buildAchievementItem("Mordernization of Financial Readiness site (Talon/New Web)", 
-                `improve performance, reliability and maintainability`, 
-                "worked as a team member on RESTful API and database",
-                "The legacy FRS(Financial Readiness Score) tool was built with Wicket, so we converted it using modern technology such as React/Jax-RS."),
-            buildAchievementItem("Trust the member(Emergency Fund) (Talon/New Web)", 
-                `Improve member's experience, give member ability to add their own EF values, show visual information about where the member is in the savings journey`, 
-                `Create service architecture, design DB, Write Flow Diagrams, Add visual sign on the card, Introduce TDD concept, add scenario system to handle the complex card transition, add flip card effect`,
-                ""),
+            buildAchievementItem("Predicted Card Experience (Talon/New Web)", 
+            `show members predicted profiles instead of making members to start over for all the questionnaire to start to use Financial Wellness Tool`, 
+            `involved to the architecture design for the services and gave insights as a developer of existing services, created and lead UI development from the base to the top using React Hooks/ Router/ Reducer`,
+            `I have merged existing FRS questionnaire application and dashboard application and created a new router structure to make them compatible to each other. 
+            Also, wrote multiple scripts to make the pipelines to leave proper evidence from the new projects. 
+            I have consulted and made sure the new service follow micro-service concept and would make calls effectively between services.
+            `),
             buildAchievementItem("Trust the member(Debt and Spending) (Talon/New Web)", 
-                `Improve member's experience, give member more specialized guideline adding more steps, show visual information about where the member is in the debt spending journey`, 
-                `co-lead the team with the team lead, code review and debug, add horseshoe chart, lead the team, technical consult to the offshore teams, code reviews and debug`,
-                ""),
-            
+            `Improve member's experience, give member more specialized guideline adding more steps, show visual information about where the member is in the debt spending journey`, 
+            `co-lead the team with the team lead, code review and debug, add horseshoe chart, lead the team, technical consult to the offshore teams, code reviews and debug`,
+            ""),
+            buildAchievementItem("Trust the member(Emergency Fund) (Talon/New Web)", 
+            `Improve member's experience, give member ability to add their own EF values, show visual information about where the member is in the savings journey`, 
+            `Create service architecture, design DB, Write Flow Diagrams, Add visual sign on the card, Introduce TDD concept, add scenario system to handle the complex card transition, add flip card effect`,
+            ""),
             buildAchievementItem("Upgrade Pipelines to use compliant modules (Gitlab-ci)",
              `meet compliant policy, improve reliability`, 
              "implement x-ray, sonarqube, move repository to the managed repository",
              ""),
+             buildAchievementItem("Improve performance/reliability of the Financial Readiness app (Java/Jax-RS)",
+             `meet compliant policy, improve reliability`, 
+             "Found multiple possible sytem errors and fixed such as failure occured by timing issues and version mismatch of network cache and jackson",
+             "I have reviewed the source code occationally and found possible bugs. Also, I have participated to fix the errors found by other testers"),
             buildAchievementItem("Create EasyUnit (Java/Mochito)", 
             "save extra time to make unit tests for resource objects",
             "created easy-unit, introduce it to the team",
@@ -326,6 +332,10 @@ export const RightContents = Object.freeze({
             When converting activity list to openl, it was enumours amount of data and multiple people worked on it. 
             We didn't have a way to validate them so I have created parsers using excel and confirmed if the converted tables are equivalent to the original formula.
             `),
+            buildAchievementItem("Mordernization of Financial Readiness site (Talon/New Web)", 
+            `improve performance, reliability and maintainability`, 
+            "worked as a team member on RESTful API and database",
+            "The legacy FRS(Financial Readiness Score) tool was built with Wicket, so we converted it using modern technology such as React/Jax-RS."),
         ]),
         
         buildAchievement("Eonic Korea", [
