@@ -1,6 +1,6 @@
 import { createElement, createImage } from '../../tools/elementTools.js';
 import { setLoadEventForCss } from '../../tools/fileTools.js';
-import { TopContents } from '../consts.js';
+import { TopContents } from '../contentLoader.js';
 
 const Name = createElement('h1', {className: 'profile-name'}, TopContents.name);
 const Address = createElement('h3', {className: 'profile-address'}, TopContents.address);

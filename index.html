@@ -45,14 +45,17 @@
 				
 			</div>
 		</div>
+		<script src="./tools/storageTools.js" type="text/javascript"></script>
 		<script id="main-script" async defer type="module"></script>
 		<script type="text/javascript">
 			//script loader.
 			window.addEventListener("load", ()=>{
 				var mainScript = document.getElementById("main-script");
 				var existingSrc = mainScript.src;
+				setVariant();
+				
 				if(!existingSrc){
-					mainScript.src = "./main.js?version=" + (Math.random()*100000);
+					mainScript.src = "./main.js?variant=" + getVariant();
 				}
 			})
 		</script>

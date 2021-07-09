@@ -1,5 +1,6 @@
-import { getElementBySelector } from "./elementTools.js";
+// import { getElementBySelector } from "./elementTools.js";
 
+const { getElementBySelector } = await import( "./elementTools.js?version="+getVariant());
 /**
  * @type {{value: Object.<string, [function]>}}
  */

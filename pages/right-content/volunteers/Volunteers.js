@@ -1,7 +1,7 @@
 import Title from '../../left-content/Title.js';
 import { createElement } from '../../../tools/elementTools.js';
 import { setLoadEventForCss } from '../../../tools/fileTools.js';
-import { RightContents } from '../../consts.js';
+import { RightContents } from '../../contentLoader.js';
 
 const VolunteerList = createElement('ul',{className: 'volunteer-list'}, 
 	RightContents.volunteers.map(vol=>

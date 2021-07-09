@@ -97,6 +97,7 @@ export const LeftContents = Object.freeze({
     })
 });
 
+
 export const TopContents = Object.freeze({
     name: 'Songhyeon Jun',
     address: 'San Antonio, TX, 78261',

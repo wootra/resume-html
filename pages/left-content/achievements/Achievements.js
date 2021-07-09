@@ -1,7 +1,7 @@
 import Title from '../Title.js';
 import { createElement } from '../../../tools/elementTools.js';
 import { setLoadEventForCss } from '../../../tools/fileTools.js';
-import { RightContents } from '../../consts.js';
+import { RightContents } from '../../contentLoader.js';
 import ExpandCollapseTool from '../../../tools/expandCollapseTool.js';
 
 const AchievementItem = ({name, desc})=>createElement('div', 

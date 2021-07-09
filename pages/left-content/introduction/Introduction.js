@@ -1,6 +1,6 @@
 import { createElement } from '../../../tools/elementTools.js';
 import { setLoadEventForCss } from '../../../tools/fileTools.js';
-import { LeftContents } from '../../consts.js';
+import { LeftContents } from '../../contentLoader.js';
 import NormalDesc from '../NormalDesc.js';
 import Title from '../Title.js';
 
