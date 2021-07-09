@@ -350,8 +350,8 @@ export const RightContents = Object.freeze({
                 "Develop high performing storage system"),
             buildAchievementItem("Sonar signal monitoring system", 
                  `handle high load data`,
-                  "design the architecture, lead the sw team(Java/Javascript/C/C++/Intel IPP)"),
-                  "To achieve the performance requirement, I have create an architecture of multiple platforms/languages"
+                  "design the architecture, lead the sw team(Java/Javascript/C/C++/Intel IPP)",
+                  "To achieve the performance requirement, I have create an architecture of multiple platforms/languages"),
         ]),
         buildAchievement("Realtimewave", [
             buildAchievementItem("Create TestNgine", 
