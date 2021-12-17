@@ -36,7 +36,7 @@ export const LeftContents = Object.freeze({
             [2018,9], null, 
             'Maintain & Improve Financial Readiness/Wellness app', 
             'Financial / Insurance', 
-            'SW Engineer I', 
+            'SW Engineer Senior', 
             [
                 'React',       'Java',
                 'Redux',       'Javascript',
@@ -51,7 +51,8 @@ export const LeftContents = Object.freeze({
             [
                 "Mordernization of Financial Readiness site (Talon/New Web)",
                 "Improve performance/reliability of the Financial Readiness app",
-                "Involved to overall applications except for batch process"
+                "Involved to overall applications except for batch process",
+                "Leading the dev team"
             ]
             ),
             buildCareer('Eonic Korea', 'http://eonic.co.kr/', 
