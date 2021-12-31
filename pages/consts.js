@@ -27,7 +27,7 @@ export const LeftContents = Object.freeze({
     Introduction: Object.freeze({
         TITLE: 'Introduction',
         DESC: `I am good at problem solving and enjoy learning new technology as well as trying fresh approach using the technologies.
-        From the recent experience, I am confident at React hooks, Jest, CSS for front end, and Java, JAX-RS, Mochito for backend.`
+        From the recent experience, I am confident at React hooks, Jest, CSS for front end, and Java, JAX-RS, Mockito for backend.`
     }),
     Careers: Object.freeze({
         TITLE: "Careers",
@@ -44,7 +44,7 @@ export const LeftContents = Object.freeze({
                 'HTML',        'CSS',
                 'Openshift',   'gitlab-ci',
                 'Mocha',       'Jest',
-                'Mochito',     'Enzyme',
+                'Mockito',     'Enzyme',
                 'Cypress',     'Spock',
                 "Kafka"
             ],
@@ -243,7 +243,7 @@ export const RightContents = Object.freeze({
             buildSkillLevel("Mocha", 5),
             buildSkillLevel("Enzyme", 5),
             buildSkillLevel("sinon", 5),
-            buildSkillLevel("Mochito", 5),
+            buildSkillLevel("Mockito", 5),
             buildSkillLevel("cypress", 5),
             buildSkillLevel("Selenium", 4),
             buildSkillLevel("Spock", 3),
@@ -320,7 +320,7 @@ export const RightContents = Object.freeze({
              "I have reviewed the source code occationally and found possible bugs. Also, I have participated to fix the errors found by other testers"),
             buildAchievementItem("Create EasyUnit", 
             "save extra time to make unit tests for resource objects",
-            "created easy-unit, introduce it to the team(Java/Mochito)",
+            "created easy-unit, introduce it to the team(Java/Mockito)",
             `
                 Resource Objects are used overall server-client model. 
                 lombok covers a lot, but it does not create unit test. 
