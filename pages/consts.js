@@ -38,17 +38,15 @@ export const LeftContents = Object.freeze({
             'Financial / Insurance', 
             'SW Engineer Senior', 
             [
-                'React',       'Java',
-                'Redux',       'Javascript',
-                'RESTful API(JAX-rs/Spring boot)',
-                'HTML',        'CSS',
+                'React', 'React Hooks', 'Redux', 'Router(v5/v6)', 'Java8', 'Javascript(vanilla/ES6~2021)'
+                'RESTful API(JBoss/Spring boot/Node.js & Express)',
                 'Openshift',   'gitlab-ci',
-                'Mocha',       'Jest',
-                'Mockito',     'Enzyme',
-                'Cypress',     'Spock',
-                "Kafka"
+                'Mocha', 'Jest', 'Enzyme', 'Cypress', 'RTL(React Testing Library)',
+                'Spock', 'Mockito', 'JUnit(4/5)', 
+                'Kafka',
             ],
             [
+                "Improvement of Small business Insurance Experience",
                 "Mordernization of Financial Readiness site (Talon/New Web)",
                 "Improve performance/reliability of the Financial Readiness app",
                 "Involved to overall applications except for batch process",
@@ -61,22 +59,21 @@ export const LeftContents = Object.freeze({
             'Sonar / Defense systems', 
             'Lead SW Engineer', 
             [
-                'C',           'C++',
-                'RESTful API', 'Javascript',
-                'HTML',        'Labview',
+                'C', 'C++',
+                'Socket communication', 'Labview',
                 'Intel IPP/TBB',   'Linux',
-                'Lab Windows/CVI', "GIT/SNS"
+                'Lab Windows/CVI', "GIT/SVN"
             ],
             [
                 "Development of Habor defense system",
-                "Development of sonar system in Jang-bo-go submarine vehicle",
-                "Lead the software team",
-                "Design architecture, analyze sonar signal, working as POC of all sonar applications"
+                "Development of sonar system in a submarine(Jangbogo)",
+                "Software team lead",
+                "Software architecture, analyze sonar footprints"
             ]
             ),
             buildCareer('Realtimewave', 'http://realtimewave.com/', 
             [2011,2], [2016,6], 
-            'Develop Test Systems for UAV, Missiles', 
+            'Development of Automated/Manual Test Solutions for real time devices such as UAV and Guided Missile Systems', 
             'Aero / Defense systems', 
             'SW Engineer', 
             [
@@ -91,7 +88,8 @@ export const LeftContents = Object.freeze({
             [
                 "Initiate / Develop TestNgine™ - RT testing tool",
                 "Participate developing RTNgine™ - RT simulator",
-                "Network programming, build servers/clients"
+                "Initiate Packet management and automated scenario software",
+                "Initiate Realtime scenario management software"
             ]
             ),
         ]
