@@ -38,7 +38,7 @@ export const LeftContents = Object.freeze({
             'Financial / Insurance', 
             'SW Engineer Senior', 
             [
-                'React', 'React Hooks', 'Redux', 'Router(v5/v6)', 'Java8', 'Javascript(vanilla/ES6~2021)'
+                'React', 'React Hooks', 'Redux', 'Router(v5/v6)', 'Java8', 'Javascript(vanilla/ES6~2021)',
                 'RESTful API(JBoss/Spring boot/Node.js & Express)',
                 'Openshift',   'gitlab-ci',
                 'Mocha', 'Jest', 'Enzyme', 'Cypress', 'RTL(React Testing Library)',
