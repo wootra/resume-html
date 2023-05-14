@@ -1,0 +1,13 @@
+{
+    "name": "resume-html",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo 'no test.'",
+        "build": "echo 'no build'"
+    },
+    "keywords": [],
+    "author": "Songhyeon Jun (shjeon0730@gmail.com)",
+    "license": "ISC"
+}
